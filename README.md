@@ -36,9 +36,3 @@ To get started with the Multimodal Receipt AI project:
 cd multimodal-receipt-ai
 bash scripts/setup_environment.sh
 ```
-
-To explore the LLM Inference study materials:
-```bash
-cd llm-inference
-# Start with the Goals.md file for the 1-month plan
-```
