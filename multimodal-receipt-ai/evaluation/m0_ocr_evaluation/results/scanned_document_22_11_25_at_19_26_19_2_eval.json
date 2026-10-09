@@ -1,0 +1,133 @@
+{
+  "image": "scanned_document_22_11_25_at_19_26_19_2.jpg",
+  "ground_truth": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "EDEKA Pasinger Marienplatz",
+      "date": "06.09.25",
+      "time": "18:22",
+      "line_items": [
+        {
+          "raw_text": "BIOE Salat-Mix",
+          "raw_price": 1.49
+        },
+        {
+          "raw_text": "Maggi Klare Suppe",
+          "raw_price": 1.99
+        },
+        {
+          "raw_text": "G&G Party Nuts",
+          "raw_price": 1.29
+        },
+        {
+          "raw_text": "G&G Erdn\u00fcsse pik.",
+          "raw_price": 0.99
+        },
+        {
+          "raw_text": "G&G Erdnussbutter",
+          "raw_price": 1.89
+        },
+        {
+          "raw_text": "G&G Erdnusske 0,99 \u20ac x 2",
+          "raw_price": 1.98
+        },
+        {
+          "raw_text": "Maggi Klare Suppe",
+          "raw_price": 3.89
+        },
+        {
+          "raw_text": "Capricorne Sa 1,09 \u20ac x 4",
+          "raw_price": 4.36
+        },
+        {
+          "raw_text": "Palm.Fl\u00fcssigseife",
+          "raw_price": 1.49
+        },
+        {
+          "raw_text": "Ariel Vollwaschm.",
+          "raw_price": 5.89
+        },
+        {
+          "raw_text": "Rispen-Tomat 1,188 kg x 1,77 \u20ac/kg",
+          "raw_price": 2.1
+        }
+      ],
+      "subtotal": 27.36,
+      "tax": 2.49,
+      "total": 27.36,
+      "payment_method": "Mastercard"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.98
+  },
+  "prediction": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "EDEKA Pasinger Marienplatz",
+      "date": "06.09.25",
+      "time": "18:22",
+      "line_items": [
+        {
+          "raw_text": "BIOE Salat-Mix",
+          "raw_price": 1.49
+        },
+        {
+          "raw_text": "Maggi Klare Suppe",
+          "raw_price": 1.99
+        },
+        {
+          "raw_text": "G&G Party Nuts",
+          "raw_price": 1.29
+        },
+        {
+          "raw_text": "G&G Erdnussse pik.",
+          "raw_price": 0.99
+        },
+        {
+          "raw_text": "G&G Erdnussbutter",
+          "raw_price": 1.89
+        },
+        {
+          "raw_text": "Maggi Klare Suppe",
+          "raw_price": 1.98
+        },
+        {
+          "raw_text": "Capricorne Sa 1,09 \u20ac x 4",
+          "raw_price": 4.36
+        },
+        {
+          "raw_text": "Palm.Fl\u00fcssigseife",
+          "raw_price": 5.89
+        },
+        {
+          "raw_text": "Ariel Vollwaschm.",
+          "raw_price": 2.1
+        },
+        {
+          "raw_text": "Rispen-Tomat",
+          "raw_price": 1.77
+        },
+        {
+          "raw_text": "1,188 kg x",
+          "raw_price": 1.77
+        }
+      ],
+      "subtotal": 18.67,
+      "tax": 1.31,
+      "total": 19.98,
+      "payment_method": "DEBIT MASTERCARD"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.95
+  }
+}

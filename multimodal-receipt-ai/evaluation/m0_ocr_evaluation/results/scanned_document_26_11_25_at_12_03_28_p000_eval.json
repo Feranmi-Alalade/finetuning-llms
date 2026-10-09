@@ -1,0 +1,149 @@
+{
+  "image": "scanned_document_26_11_25_at_12_03_28_p000.jpg",
+  "ground_truth": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "EDEKA Pasinger Marienplatz",
+      "date": "27.09.25",
+      "time": "15:59",
+      "line_items": [
+        {
+          "raw_text": "Gewebetasche",
+          "raw_price": 1.0
+        },
+        {
+          "raw_text": "Nesc. Gold",
+          "raw_price": 11.99
+        },
+        {
+          "raw_text": "G&G Erdnusske 0,99 \u20ac x 3",
+          "raw_price": 2.97
+        },
+        {
+          "raw_text": "R.Sport Mandel",
+          "raw_price": 2.29
+        },
+        {
+          "raw_text": "G&G Eier BDH",
+          "raw_price": 1.99
+        },
+        {
+          "raw_text": "G&G Cappuccino",
+          "raw_price": 3.49
+        },
+        {
+          "raw_text": "Sensod. Zahncreme",
+          "raw_price": 2.49
+        },
+        {
+          "raw_text": "Colgate Zahncreme",
+          "raw_price": 2.99
+        },
+        {
+          "raw_text": "Bio E.H-Mi. 3,8% 1l",
+          "raw_price": 1.25
+        },
+        {
+          "raw_text": "Rispen-Tomat 1,414 kg x 2,49 \u20ac/kg",
+          "raw_price": 3.52
+        },
+        {
+          "raw_text": "Bio E.Vega. Sojadr.",
+          "raw_price": 0.99
+        },
+        {
+          "raw_text": "Capricorne Sa 1,09 \u20ac x 3",
+          "raw_price": 3.27
+        }
+      ],
+      "subtotal": 35.04,
+      "tax": 3.2,
+      "total": 38.24,
+      "payment_method": "Mastercard"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.99
+  },
+  "prediction": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "EDEKA",
+      "date": "27.09.25",
+      "time": "16:00",
+      "line_items": [
+        {
+          "raw_text": "Gewebetasche",
+          "raw_price": 1.0
+        },
+        {
+          "raw_text": "Nesc. Gold",
+          "raw_price": 11.99
+        },
+        {
+          "raw_text": "G&G Erdnusske",
+          "raw_price": 2.97
+        },
+        {
+          "raw_text": "R.Sport Mandel",
+          "raw_price": 2.29
+        },
+        {
+          "raw_text": "G&G Eier BDH",
+          "raw_price": 1.99
+        },
+        {
+          "raw_text": "G&G Cappuccino",
+          "raw_price": 3.49
+        },
+        {
+          "raw_text": "Sensod.Zahncreme",
+          "raw_price": 2.49
+        },
+        {
+          "raw_text": "Colgate Zahncreme",
+          "raw_price": 2.99
+        },
+        {
+          "raw_text": "Bio E.H-Mi.3,8%11",
+          "raw_price": 1.25
+        },
+        {
+          "raw_text": "Rispen-Tomat",
+          "raw_price": 3.52
+        },
+        {
+          "raw_text": "1,414 kg x 2,49 \u20ac/kg",
+          "raw_price": 2.49
+        },
+        {
+          "raw_text": "Bio E.Vega.Sojadr.",
+          "raw_price": 0.99
+        },
+        {
+          "raw_text": "Capricorne Sa 1,09 \u20ac x 3",
+          "raw_price": 3.27
+        },
+        {
+          "raw_text": "Posten: 16",
+          "raw_price": 0.0
+        }
+      ],
+      "subtotal": 38.24,
+      "tax": 7.47,
+      "total": 38.24,
+      "payment_method": "Mastercard"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.95
+  }
+}

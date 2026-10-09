@@ -1,0 +1,65 @@
+{
+  "image": "scanned_document_21_12_25_at_16_10_04_p000_rotation.jpg",
+  "ground_truth": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "REWE CITY",
+      "date": "20.12.2025",
+      "time": "15:52:37",
+      "line_items": [
+        {
+          "raw_text": "BABYSPINAT BIO 3,78 B",
+          "raw_price": 3.78
+        },
+        {
+          "raw_text": "2 Stk x 1,89",
+          "raw_price": null
+        }
+      ],
+      "subtotal": 3.78,
+      "tax": 0.25,
+      "total": 3.78,
+      "payment_method": "Mastercard"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 1.0
+  },
+  "prediction": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "REWE CITY",
+      "date": "20.12.2025",
+      "time": "15:52:37",
+      "line_items": [
+        {
+          "raw_text": "BABYSPINAT BIO",
+          "raw_price": 1.89
+        },
+        {
+          "raw_text": "2 Stk x",
+          "raw_price": 1.89
+        },
+        {
+          "raw_text": "SUMME",
+          "raw_price": 3.78
+        }
+      ],
+      "subtotal": 3.78,
+      "tax": 0.25,
+      "total": 3.78,
+      "payment_method": "DEBIT MASTERCARD"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.95
+  }
+}

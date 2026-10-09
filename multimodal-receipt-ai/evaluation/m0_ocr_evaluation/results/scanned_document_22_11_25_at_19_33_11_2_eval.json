@@ -1,0 +1,97 @@
+{
+  "image": "scanned_document_22_11_25_at_19_33_11_2.jpg",
+  "ground_truth": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "EDEKA",
+      "date": "13.09.25",
+      "time": "13:39",
+      "line_items": [
+        {
+          "raw_text": "Papiertragetasche",
+          "raw_price": 0.25
+        },
+        {
+          "raw_text": "Rispen-Tomat",
+          "raw_price": 1.36
+        },
+        {
+          "raw_text": "0,682 kg x 1,99 \u20ac/kg",
+          "raw_price": null
+        },
+        {
+          "raw_text": "G&G Eier aus FLH",
+          "raw_price": 2.69
+        },
+        {
+          "raw_text": "BIOE Salat-Mix",
+          "raw_price": 1.99
+        }
+      ],
+      "subtotal": 6.29,
+      "tax": 0.44,
+      "total": 6.29,
+      "payment_method": "Mastercard"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 1.0
+  },
+  "prediction": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "EDEKA",
+      "date": "13.09.25",
+      "time": "13:39",
+      "line_items": [
+        {
+          "raw_text": "Papiertragetasche",
+          "raw_price": 0.25
+        },
+        {
+          "raw_text": "Rispen-Tomat",
+          "raw_price": 1.36
+        },
+        {
+          "raw_text": "0,682 kg x 1,99 \u20ac/kg",
+          "raw_price": 1.36
+        },
+        {
+          "raw_text": "G&G Eier aus FLH",
+          "raw_price": 2.69
+        },
+        {
+          "raw_text": "BIOE Salat-Mix",
+          "raw_price": 1.99
+        },
+        {
+          "raw_text": "Posten: 4",
+          "raw_price": 0
+        },
+        {
+          "raw_text": "SUMME",
+          "raw_price": 6.29
+        },
+        {
+          "raw_text": "Mastercard",
+          "raw_price": 6.29
+        }
+      ],
+      "subtotal": 5.64,
+      "tax": 0.4,
+      "total": 6.04,
+      "payment_method": "DEBIT MASTERCARD"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.95
+  }
+}

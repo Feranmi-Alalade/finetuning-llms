@@ -1,0 +1,77 @@
+{
+  "image": "scanned_document_26_11_25_at_17_05_08_p000.jpg",
+  "ground_truth": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "Lidl",
+      "date": "16-AUG-2025",
+      "time": "18:37:58",
+      "line_items": [
+        {
+          "raw_text": "Bepfandet 6",
+          "raw_price": 1.5
+        }
+      ],
+      "subtotal": null,
+      "tax": null,
+      "total": 1.5,
+      "payment_method": null
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 1.0
+  },
+  "prediction": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "Lidl",
+      "date": "16-AUG-2025",
+      "time": "18:37:58",
+      "line_items": [
+        {
+          "raw_text": "Tomra 90",
+          "raw_price": 90
+        },
+        {
+          "raw_text": "Bepfandet 6",
+          "raw_price": 6
+        },
+        {
+          "raw_text": "\u20ac 1.50",
+          "raw_price": 1.5
+        },
+        {
+          "raw_text": "Bon 24155",
+          "raw_price": 1.5
+        },
+        {
+          "raw_text": "Lidl lohnt sich.",
+          "raw_price": 0
+        },
+        {
+          "raw_text": "Bodenseestra\u00dfe 1-29",
+          "raw_price": 0
+        },
+        {
+          "raw_text": "81241 M\u00fcnchen",
+          "raw_price": 0
+        }
+      ],
+      "subtotal": 90,
+      "tax": 0,
+      "total": 1.5,
+      "payment_method": "Cash"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.95
+  }
+}

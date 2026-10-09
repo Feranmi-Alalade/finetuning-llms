@@ -1,0 +1,108 @@
+{
+  "image": "scanned_document_26_11_25_at_11_35_55_p000.jpg",
+  "ground_truth": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "EDEKA Pasinger Marienplatz",
+      "date": "13.05.25",
+      "time": "18:57",
+      "line_items": [
+        {
+          "raw_text": "Teek.Italie.Limone",
+          "raw_price": 2.29
+        },
+        {
+          "raw_text": "Teek.Gr\u00fcntee",
+          "raw_price": 2.29
+        },
+        {
+          "raw_text": "Bio E.Spaghet 0,85 \u20ac x 2",
+          "raw_price": 1.7
+        },
+        {
+          "raw_text": "Mars Minis",
+          "raw_price": 3.99
+        },
+        {
+          "raw_text": "G&G Vollkorntoast",
+          "raw_price": 0.79
+        },
+        {
+          "raw_text": "Teek.Gr\u00fcntee",
+          "raw_price": 2.29
+        },
+        {
+          "raw_text": "Teek.Fr\u00fcchtetee",
+          "raw_price": 2.29
+        },
+        {
+          "raw_text": "Teek.Apfeltee",
+          "raw_price": 2.29
+        },
+        {
+          "raw_text": "Snickers Minis",
+          "raw_price": 3.99
+        },
+        {
+          "raw_text": "Smarties Mini",
+          "raw_price": 4.79
+        },
+        {
+          "raw_text": "Twix",
+          "raw_price": 3.29
+        },
+        {
+          "raw_text": "Celebrations",
+          "raw_price": 4.49
+        },
+        {
+          "raw_text": "G&G Sardinen 0,99 \u20ac x 2",
+          "raw_price": 1.98
+        },
+        {
+          "raw_text": "G&G Makrelenf 1,29 \u20ac x 2",
+          "raw_price": 2.58
+        },
+        {
+          "raw_text": "Rispen-Tomat 0,326 kg x 1,11 \u20ac/kg",
+          "raw_price": 0.36
+        },
+        {
+          "raw_text": "Brandt Hobbit 1,79 \u20ac x 2",
+          "raw_price": 3.58
+        },
+        {
+          "raw_text": "Niv.Deo Roll-On",
+          "raw_price": 3.45
+        },
+        {
+          "raw_text": "Haribo Goldb\u00e4ren",
+          "raw_price": 1.19
+        },
+        {
+          "raw_text": "Haribo Schnuller",
+          "raw_price": 1.19
+        },
+        {
+          "raw_text": "Kit Kat",
+          "raw_price": 3.19
+        }
+      ],
+      "subtotal": 52.01,
+      "tax": 3.73,
+      "total": 52.01,
+      "payment_method": "Mastercard"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.98
+  },
+  "prediction": {
+    "error": "Failed to parse JSON: Expecting ',' delimiter: line 104 column 5 (char 2101)",
+    "raw": "\n{\n  \"document_type\": \"receipt\",\n  \"ocr\": {\n    \"merchant_name\": \"EDEKA Pasinger Marienplatz\",\n    \"date\": \"13.05.25\",\n    \"time\": \"18:57\",\n    \"line_items\": [\n      {\n        \"raw_text\": \"Teek. Italie.Limone\",\n        \"raw_price\": 2.29\n      },\n      {\n        \"raw_text\": \"Teek. Gr\u00fcntee\",\n        \"raw_price\": 2.29\n      },\n      {\n        \"raw_text\": \"Bio E. Spaghetti 0,85 \u20ac x 2\",\n        \"raw_price\": 1.70\n      },\n      {\n        \"raw_text\": \"Mars Minis\",\n        \"raw_price\": 3.99\n      },\n      {\n        \"raw_text\": \"G&G Vollkorntoast\",\n        \"raw_price\": 0.79\n      },\n      {\n        \"raw_text\": \"Teek. Gr\u00fcntee\",\n        \"raw_price\": 2.29\n      },\n      {\n        \"raw_text\": \"Teek. Fr\u00fcchtetee\",\n        \"raw_price\": 2.29\n      },\n      {\n        \"raw_text\": \"Teek. Apfeltee\",\n        \"raw_price\": 2.29\n      },\n      {\n        \"raw_text\": \"Snickers Minis\",\n        \"raw_price\": 3.99\n      },\n      {\n        \"raw_text\": \"Smarties Mini\",\n        \"raw_price\": 4.79\n      },\n      {\n        \"raw_text\": \"Twix\",\n        \"raw_price\": 3.29\n      },\n      {\n        \"raw_text\": \"Celebrations\",\n        \"raw_price\": 4.49\n      },\n      {\n        \"raw_text\": \"G&G Sardinen\",\n        \"raw_price\": 1.98\n      },\n      {\n        \"raw_text\": \"G&G Makrelenf\",\n        \"raw_price\": 2.58\n      },\n      {\n        \"raw_text\": \"Rispen-Tomat\",\n        \"raw_price\": 0.36\n      },\n      {\n        \"raw_text\": \"0,326 kg x 1,11 \u20ac/kg\",\n        \"raw_price\": 3.58\n      },\n      {\n        \"raw_text\": \"Brandt Hobbit 1,79 \u20ac x 2\",\n        \"raw_price\": 3.45\n      },\n      {\n        \"raw_text\": \"Niv.Deo Roll-On\",\n        \"raw_price\": 1.19\n      },\n      {\n        \"raw_text\": \"Haribo Goldb\u00e4ren\",\n        \"raw_price\": 1.19\n      },\n      {\n        \"raw_text\": \"Haribo Schnuller\",\n        \"raw_price\": 1.19\n      },\n      {\n        \"raw_text\": \"Kit Kat\",\n        \"raw_price\": 3.19\n      },\n      {\n        \"raw_text\": \"Posten: 24\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"SUMME\",\n        \"raw_price\": 52.01\n      },\n      {\n        \"raw_text\": \"Mastercard\",\n        \"raw_price\": 52.01\n      }\n    },\n    \"subtotal\": 45.38,\n    \"tax\": 3.18,\n    \"total\": 48.56,\n    \"payment_method\": \"DEBIT MASTERCARD\",\n    \"quality_flags\": {\n      \"is_blurry\": false,\n      \"is_partial\": false,\n      \"is_rotated\": false,\n      \"is_low_contrast\": false\n    },\n    \"confidence\": 0.95\n  }\n}\n\n\n"
+  }
+}

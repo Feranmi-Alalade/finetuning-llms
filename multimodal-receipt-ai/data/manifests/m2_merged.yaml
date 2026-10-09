@@ -1,0 +1,80 @@
+name: merged_end_to_end
+stage: merged
+description: >
+  End-to-end visual → semantic extraction model.
+  Distilled from M0 and M1.
+
+# ============================
+# OBJECTIVES
+# ============================
+objectives:
+  training:
+    - name: ocr_loss
+      formulation: >
+        \mathcal{L}_{ocr}
+      weight: 0.40
+
+    - name: semantic_loss
+      formulation: >
+        \mathcal{L}_{semantic}
+      weight: 0.40
+
+    - name: rejection_loss
+      formulation: >
+        \mathcal{L}_{reject}
+      weight: 0.10
+
+    - name: distillation_loss
+      weight: 0.10
+      formulation: >
+        \mathcal{L}_{distill} = \sum_y P_{teacher}(y) \log \frac{P_{teacher}(y)}{P_{merged}(y)}
+
+  total_loss: >
+    \mathcal{L}_{merged} = 0.40\,\mathcal{L}_{ocr} + 0.40\,\mathcal{L}_{semantic} + 0.10\,\mathcal{L}_{reject} + 0.10\,\mathcal{L}_{distill}
+
+# ============================
+# SUPERVISION LEVEL
+# ============================
+supervision_level:
+  - receipt_level
+  - line_item_level
+
+# ============================
+# DATA MIX
+# ============================
+mix:
+  unit: image
+  components:
+    base: { weight: 0.70 }
+    partial: { weight: 0.08 }
+    blur_low: { weight: 0.07 }
+    empty: { weight: 0.05 }
+    non_receipt: { weight: 0.05 }
+    rotation: { weight: 0.05 }
+
+# ============================
+# SPLITS
+# ============================
+splits:
+  train: 0.65
+  val: 0.20
+  test: 0.15
+
+# ============================
+# EVALUATION
+# ============================
+evaluation:
+  metrics:
+    end_to_end_accuracy:
+      good: ">= 0.85"
+      bad: "<= 0.70"
+
+    rejection_accuracy:
+      good: ">= 0.95"
+
+    latency_ms:
+      good: "<= 500"
+
+  subsets:
+    clean: { tag: base }
+    degraded: { tag: stability }

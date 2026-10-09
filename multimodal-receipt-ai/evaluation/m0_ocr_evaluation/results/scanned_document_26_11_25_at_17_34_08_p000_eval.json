@@ -1,0 +1,109 @@
+{
+  "image": "scanned_document_26_11_25_at_17_34_08_p000.jpg",
+  "ground_truth": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "LIDL",
+      "date": "14.04.2025",
+      "time": "17:21",
+      "line_items": [
+        {
+          "raw_text": "Apfelschorle",
+          "raw_price": 1.09
+        },
+        {
+          "raw_text": "Pfand 0,25 EM",
+          "raw_price": 0.25
+        },
+        {
+          "raw_text": "Eistee Zitrone",
+          "raw_price": 0.89
+        },
+        {
+          "raw_text": "Pfand 0,25 EM",
+          "raw_price": 0.25
+        },
+        {
+          "raw_text": "Nusskracher Vollmil. 1,39 x 4",
+          "raw_price": 5.56
+        },
+        {
+          "raw_text": "Lidl Plus Rabatt",
+          "raw_price": -0.56
+        },
+        {
+          "raw_text": "Snickers",
+          "raw_price": 3.29
+        }
+      ],
+      "subtotal": 9.83,
+      "tax": 0.94,
+      "total": 10.77,
+      "payment_method": "Kreditkarte"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.99
+  },
+  "prediction": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "Lidl",
+      "date": "14.04.2025",
+      "time": "17:21",
+      "line_items": [
+        {
+          "raw_text": "Apfelschorle",
+          "raw_price": 1.09
+        },
+        {
+          "raw_text": "Pfand 0,25 EM",
+          "raw_price": 0.25
+        },
+        {
+          "raw_text": "Eistee Zitrone",
+          "raw_price": 0.89
+        },
+        {
+          "raw_text": "Pfand 0,25 EM",
+          "raw_price": 0.25
+        },
+        {
+          "raw_text": "Nusskracher Vollmil. 1,39 x 4",
+          "raw_price": 5.56
+        },
+        {
+          "raw_text": "Lidl Plus Rabatt",
+          "raw_price": -0.56
+        },
+        {
+          "raw_text": "Snickers",
+          "raw_price": 3.29
+        },
+        {
+          "raw_text": "zu zahlen",
+          "raw_price": 10.77
+        },
+        {
+          "raw_text": "Kreditkarte",
+          "raw_price": 10.77
+        }
+      ],
+      "subtotal": 9.83,
+      "tax": 0.94,
+      "total": 10.77,
+      "payment_method": "MasterCard"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.95
+  }
+}

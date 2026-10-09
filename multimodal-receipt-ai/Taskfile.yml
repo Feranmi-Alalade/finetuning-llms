@@ -1,0 +1,191 @@
+version: '3'
+
+dotenv: ['../.env']
+
+vars:
+  PROJECT_ROOT: 
+    sh: pwd
+  MODULE_ROOT: "{{.PROJECT_ROOT}}"
+  BIN_DIR: "{{.PROJECT_ROOT}}/bin"
+  VENV_DIR: "{{.PROJECT_ROOT}}/.venv"
+  LLAMA_CPP_DIR: "{{.PROJECT_ROOT}}/llama.cpp"
+
+tasks:
+  
+  help:
+    desc: Show help and usage information
+    cmds:
+      - echo "Multimodal Receipt AI - Task Management"
+      - echo "Usage - task <command> [CLI_ARGS='...']"
+      - echo ""
+      - task --list
+    silent: true
+
+  list:
+    desc: List all available tasks
+    cmds:
+      - task --list
+
+  # ----------------------------------------------------------------------------
+  # Dependencies & Setup
+  # ----------------------------------------------------------------------------
+  deps:check:
+    desc: Check and auto-install missing dependencies
+    cmds:
+      - |
+        MWSING=0
+        which uv || MWSING=1
+        which ollama || MWSING=1
+        uv run huggingface-cli --help > /dev/null 2>&1 || MWSING=1
+        if [ ! -f "{{.LLAMA_CPP_DIR}}/build/bin/llama-cli" ] && [ ! -f "{{.LLAMA_CPP_DIR}}/llama-cli" ]; then
+           MWSING=1
+        fi
+        
+        if [ "$MWSING" -eq 1 ]; then
+          echo "Missing dependencies detected. Running auto-install..."
+          task deps:install
+        else
+          echo "All dependencies present."
+        fi
+    silent: true
+
+  env:check:
+    desc: Check required environment variables
+    cmds:
+      - |
+        if [ -z "$S3_BUCKET" ]; then
+          echo "WARNING: S3_BUCKET is not set. S3 sync will be skipped."
+        fi
+        if [ -z "$HF_TOKEN" ]; then
+          echo "ERROR: HF_TOKEN is not set. Deployment to Hugging Face will fail."
+          exit 1
+        fi
+    silent: true
+
+  deps:install:
+    desc: Install all dependencies (uv, llama.cpp, python requirements)
+    cmds:
+      - task: deps:install:uv
+      - task: deps:install:python
+      - task: deps:install:llama
+
+  deps:install:uv:
+    desc: Install uv package manager if missing
+    status:
+      - which uv
+    cmds:
+      - curl -LsSf https://astral.sh/uv/install.sh | sh
+
+  deps:install:llama:
+    desc: Clone and build llama.cpp using CMake (Cross-platform)
+    cmds:
+      - |
+        if [ ! -d "{{.LLAMA_CPP_DIR}}" ]; then
+          git clone https://github.com/ggerganov/llama.cpp {{.LLAMA_CPP_DIR}}
+        fi
+        cd {{.LLAMA_CPP_DIR}}
+        
+        # Check for cmake
+        if ! command -v cmake &> /dev/null; then
+          if [[ "$(uname)" == "Darwin" ]]; then
+            echo "CMake missing. Please install: brew install cmake"
+            exit 1
+          else
+            echo "CMake missing. Attempting install..."
+            sudo apt-get update && sudo apt-get install -y cmake build-essential || exit 1
+          fi
+        fi
+
+        echo "Building with CMake..."
+        cmake -B build
+        cmake --build build --config Release -j
+
+  deps:install:python:
+    desc: Install Python dependencies using uv
+    cmds:
+      - uv sync
+
+  setup:bootstrap:
+    desc: Run initial project bootstrapping
+    cmds:
+      - bash scripts/setup/bootstrap.sh
+
+  setup:environment:
+    desc: Run environment setup script
+    cmds:
+      - bash scripts/setup/setup_environment.sh
+
+  # ----------------------------------------------------------------------------
+  # Data Pipeline Tasks
+  # ----------------------------------------------------------------------------
+  data:sync:down:
+    desc: Sync data from S3 to local (Prod/Dev)
+    cmds:
+      - uv run python -c "from data.utils.s3 import sync_down_data, get_bucket_name; from system.config import config; b=get_bucket_name(); d=config.paths.data_dir; print(f'Syncing {b} -> {d}'); sync_down_data(b, d) if b else print('No bucket')"
+  
+  data:sync:up:
+    desc: Sync artifacts from local to S3
+    cmds:
+      - uv run python -c "from data.utils.s3 import sync_up_artifacts, get_bucket_name; from system.config import config; b=get_bucket_name(); d=config.paths.artifacts_dir; print(f'Syncing {d} -> {b}'); sync_up_artifacts(b, d) if b else print('No bucket')"
+
+  data:build:
+    desc: Run ingestion pipeline (Bronze -> Silver)
+    cmds:
+      - bash {{.BIN_DIR}}/01_build_dataset.sh {{.CLI_ARGS}}
+
+  data:label:
+    desc: Run teacher label generation (Silver -> Gold Teacher)
+    cmds:
+      - bash {{.BIN_DIR}}/02_run_teacher_gen.sh {{.CLI_ARGS}}
+
+  data:sample:m0:
+    desc: Sample M0 dataset (student training split)
+    cmds:
+      - bash {{.BIN_DIR}}/03_sample_m0_dataset.sh {{.CLI_ARGS}}
+
+  # ----------------------------------------------------------------------------
+  # Training Tasks
+  # ----------------------------------------------------------------------------
+  train:m0:
+    desc: Train M0 OCR Model (Fine-tuning)
+    deps: [deps:check]
+    cmds:
+      - bash {{.BIN_DIR}}/04_finetune_m0.sh {{.CLI_ARGS}}
+
+  train:m0:ocr:
+    desc: Train M0 OCR Model (Quick OCR only, no custom losses)
+    deps: [deps:check]
+    cmds:
+      - bash {{.BIN_DIR}}/04_finetune_m0.sh --env dev --no-custom-losses {{.CLI_ARGS}}
+
+  # ----------------------------------------------------------------------------
+  # Deployment & Export Tasks
+  # ----------------------------------------------------------------------------
+  deploy:export:
+    desc: "Run export and deployment pipeline (Merge -> GGUF -> Ollama -> HF). Use --quant <type> to select quantization (default: q4_k_m)."
+    deps: [deps:check, env:check, deps:install:llama]
+    cmds:
+      - bash {{.BIN_DIR}}/10_export_and_deploy.sh {{.CLI_ARGS}}
+
+  deploy:m0:
+    desc: Deploy M0 OCR Model (Prod)
+    cmds:
+      - task: deploy:export
+        vars: {CLI_ARGS: "--model m0 --env prod --quant q4_k_m {{.CLI_ARGS}}"}
+
+  deploy:m1:
+    desc: Deploy M1 Semantic Model (Prod)
+    cmds:
+      - task: deploy:export
+        vars: {CLI_ARGS: "--model m1 --env prod {{.CLI_ARGS}}"}
+
+  deploy:unified:
+    desc: Deploy Unified Model (Prod)
+    cmds:
+      - task: deploy:export
+        vars: {CLI_ARGS: "--model unified --env prod {{.CLI_ARGS}}"}
+
+  deploy:test:inference:
+    desc: Test inference of a deployed Ollama model
+    cmds:
+      - uv run python scripts/tests/test_ollama_inference.py {{.CLI_ARGS}}

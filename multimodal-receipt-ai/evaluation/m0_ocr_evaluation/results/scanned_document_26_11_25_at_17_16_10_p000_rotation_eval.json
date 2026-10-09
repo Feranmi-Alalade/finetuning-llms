@@ -1,0 +1,61 @@
+{
+  "image": "scanned_document_26_11_25_at_17_16_10_p000_rotation.jpg",
+  "ground_truth": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "EDEKA",
+      "date": "10.05.25",
+      "time": "19:50",
+      "line_items": [
+        {
+          "raw_text": "G&G Sp\u00fclmitt.Zit.",
+          "raw_price": 0.95
+        }
+      ],
+      "subtotal": 0.8,
+      "tax": 0.15,
+      "total": 0.95,
+      "payment_method": "Mastercard"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.99
+  },
+  "prediction": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "EDEKA Pasinger Marienplatz",
+      "date": "05.25",
+      "time": "19:50",
+      "line_items": [
+        {
+          "raw_text": "Sp\u00fclmittel.Zit.",
+          "raw_price": 0.95
+        },
+        {
+          "raw_text": "UMME",
+          "raw_price": 0.95
+        },
+        {
+          "raw_text": "Kartenzahlung",
+          "raw_price": 0.95
+        }
+      ],
+      "subtotal": 0.95,
+      "tax": 0.15,
+      "total": 0.95,
+      "payment_method": "DEBIT MASTERCARD"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.95
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "image": "scanned_document_26_11_25_at_17_24_13_p000_partial.jpg",
+  "ground_truth": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "M\u00fcller",
+      "date": "24.03.2025",
+      "time": "18:45:27",
+      "line_items": [
+        {
+          "raw_text": "1 PAULANER MUENCHNER",
+          "raw_price": 1.29
+        },
+        {
+          "raw_text": "PFAND-EINWEG RUECKN",
+          "raw_price": 0.25
+        },
+        {
+          "raw_text": "1 DOMINIKANER PILS DO",
+          "raw_price": 0.99
+        },
+        {
+          "raw_text": "PFAND-EINWEG RUECKN",
+          "raw_price": 0.25
+        }
+      ],
+      "subtotal": 2.78,
+      "tax": 0.44,
+      "total": 2.78,
+      "payment_method": "DEBIT MASTERCARD"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.98
+  },
+  "prediction": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "mueller.de",
+      "date": "24.03.2025",
+      "time": "18:45",
+      "line_items": [
+        {
+          "raw_text": "2,78",
+          "raw_price": 2.78
+        },
+        {
+          "raw_text": "2,34",
+          "raw_price": 2.34
+        },
+        {
+          "raw_text": "0,44",
+          "raw_price": 0.44
+        }
+      ],
+      "subtotal": 2.34,
+      "tax": 0.44,
+      "total": 2.78,
+      "payment_method": "DEBIT MASTERCARD"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.95
+  }
+}

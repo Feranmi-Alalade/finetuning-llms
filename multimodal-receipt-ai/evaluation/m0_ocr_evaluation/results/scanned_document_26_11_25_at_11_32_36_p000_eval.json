@@ -1,0 +1,97 @@
+{
+  "image": "scanned_document_26_11_25_at_11_32_36_p000.jpg",
+  "ground_truth": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "EDEKA Pasinger Marienplatz",
+      "date": "02.09.25",
+      "time": "19:01",
+      "line_items": [
+        {
+          "raw_text": "G&G Sp\u00fclmitt.Zit.",
+          "raw_price": 0.95
+        },
+        {
+          "raw_text": "G&G Glasreiniger",
+          "raw_price": 0.95
+        },
+        {
+          "raw_text": "G&G Vollkorntoast",
+          "raw_price": 0.79
+        },
+        {
+          "raw_text": "Capricorne Sa 1,09 \u20ac x 2",
+          "raw_price": 2.18
+        },
+        {
+          "raw_text": "G&G Makrelenfilets",
+          "raw_price": 1.39
+        },
+        {
+          "raw_text": "Rispen-Tomat 0,824 kg x 1,99 \u20ac/kg",
+          "raw_price": 1.64
+        }
+      ],
+      "subtotal": 7.9,
+      "tax": 0.69,
+      "total": 7.9,
+      "payment_method": "Mastercard"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.98
+  },
+  "prediction": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "EDEKA Pasinger Marienplatz",
+      "date": "02.09.25",
+      "time": "19:01",
+      "line_items": [
+        {
+          "raw_text": "G&G Sp\u00fclmittel.Zit.",
+          "raw_price": 0.95
+        },
+        {
+          "raw_text": "G&G Glasreiniger",
+          "raw_price": 0.95
+        },
+        {
+          "raw_text": "G&G Vollkorntoast",
+          "raw_price": 0.79
+        },
+        {
+          "raw_text": "Capricorne Sa 1,09 \u20ac x 2",
+          "raw_price": 2.18
+        },
+        {
+          "raw_text": "G&G Makrelenfilets",
+          "raw_price": 1.39
+        },
+        {
+          "raw_text": "Rispen-Tomat",
+          "raw_price": 1.64
+        },
+        {
+          "raw_text": "0,824 kg x 1,99 \u20ac/kg",
+          "raw_price": 1.99
+        }
+      ],
+      "subtotal": 7.9,
+      "tax": 0.39,
+      "total": 7.9,
+      "payment_method": "Mastercard"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.95
+  }
+}

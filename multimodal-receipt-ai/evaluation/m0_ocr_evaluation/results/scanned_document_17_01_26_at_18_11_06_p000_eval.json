@@ -1,0 +1,69 @@
+{
+  "image": "scanned_document_17_01_26_at_18_11_06_p000.jpg",
+  "ground_truth": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "Lidl",
+      "date": "14.01.2026",
+      "time": "18:43",
+      "line_items": [
+        {
+          "raw_text": "Eier Freiland. XXL",
+          "raw_price": 4.99
+        },
+        {
+          "raw_text": "Geschirrsp. Gelb",
+          "raw_price": 0.95
+        },
+        {
+          "raw_text": "Puten-Unterkeulen",
+          "raw_price": 4.49
+        }
+      ],
+      "subtotal": 9.66,
+      "tax": 0.77,
+      "total": 10.43,
+      "payment_method": "Kreditkarte"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.98
+  },
+  "prediction": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "Planegger Str. 2",
+      "date": "14.01.2026",
+      "time": "18:43",
+      "line_items": [
+        {
+          "raw_text": "Eier Freiland. XXL",
+          "raw_price": 4.99
+        },
+        {
+          "raw_text": "Geschirrsp. Gelb",
+          "raw_price": 0.95
+        },
+        {
+          "raw_text": "Puten-Unterkeulen",
+          "raw_price": 4.49
+        }
+      ],
+      "subtotal": 10.43,
+      "tax": 0.77,
+      "total": 10.43,
+      "payment_method": "MasterCard"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.95
+  }
+}

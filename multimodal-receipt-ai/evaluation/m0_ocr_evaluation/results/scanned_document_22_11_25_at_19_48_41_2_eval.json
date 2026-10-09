@@ -1,0 +1,48 @@
+{
+  "image": "scanned_document_22_11_25_at_19_48_41_2.jpg",
+  "ground_truth": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "LIDL",
+      "date": "28.08.2025",
+      "time": "19:34",
+      "line_items": [
+        {
+          "raw_text": "M\u00f6hren 1kg",
+          "raw_price": 1.19
+        },
+        {
+          "raw_text": "Preisvorteil",
+          "raw_price": -0.1
+        },
+        {
+          "raw_text": "Erdnusskerne 0,99 x 2",
+          "raw_price": 1.98
+        },
+        {
+          "raw_text": "Papiertraget.",
+          "raw_price": 0.2
+        },
+        {
+          "raw_text": "Putenbrustfilet",
+          "raw_price": 6.99
+        }
+      ],
+      "subtotal": 9.57,
+      "tax": 0.69,
+      "total": 10.26,
+      "payment_method": "Kreditkarte"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.98
+  },
+  "prediction": {
+    "error": "Failed to parse JSON: Expecting ',' delimiter: line 127 column 8 (char 2709)",
+    "raw": "\n{\n  \"document_type\": \"receipt\",\n  \"ocr\": {\n    \"merchant_name\": \"LIDL\",\n    \"date\": \"28.08.2025\",\n    \"time\": \"19:33\",\n    \"line_items\": [\n      {\n        \"raw_text\": \"M\u00f6hren 1kg\",\n        \"raw_price\": 1.19\n      },\n      {\n        \"raw_text\": \"Preisvorteil\",\n        \"raw_price\": -0.10\n      },\n      {\n        \"raw_text\": \"Erdnusskerne\",\n        \"raw_price\": 1.98\n      },\n      {\n        \"raw_text\": \"Papiertraget.\",\n        \"raw_price\": 0.20\n      },\n      {\n        \"raw_text\": \"Putenbrustfilet\",\n        \"raw_price\": 6.99\n      },\n      {\n        \"raw_text\": \"zu zahlen\",\n        \"raw_price\": 10.26\n      },\n      {\n        \"raw_text\": \"Kreditkarte\",\n        \"raw_price\": 10.26\n      },\n      {\n        \"raw_text\": \"Gesamter Preisvorteil\",\n        \"raw_price\": 0.10\n      },\n      {\n        \"raw_text\": \"MWST%\",\n        \"raw_price\": 0.66\n      },\n      {\n        \"raw_text\": \"Netto\",\n        \"raw_price\": 9.40\n      },\n      {\n        \"raw_text\": \"Brutto\",\n        \"raw_price\": 10.06\n      },\n      {\n        \"raw_text\": \"Summe\",\n        \"raw_price\": 0.69\n      },\n      {\n        \"raw_text\": \"TSE Transaktionsnummer: 1731769\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"Serienr. Kasse: LDL-000-6268-83\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"Serienr. TSE: D2rARTIEmQPJyg8NVWJhQewynHT\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"Pr\u00fcfwert: 1REJVen8nFqnBE4XMX+SbGiybMD11Kev\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"k/wA1udwBrJW1jFw10mwjK4tZ3QMuy5s0IH7HogirM\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"pL8N983yLmc9KaCCygKLazXkge9h0DsjwDh1r3nLvN\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"9b921kHRGaTf\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"Signaturz\u00e4hler: 3513872\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"2025-08-28T17:34:40.000Z\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"2025-08-28T17:36:02.000Z\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"6268 035250/83\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"UST-ID-NR: DE276059265\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"K-U-N-D-E-N-B-E-L-E-G\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"Bezahlung MasterCard\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"Betrag\",\n        \"raw_price\": 10.26\n      },\n      {\n        \"raw_text\": \"28.08.2025 19:33\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"TA-Nr. 034365\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"Kartennr.\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"Kontaktlos Chip\",\n        \"\n\n"
+  }
+}

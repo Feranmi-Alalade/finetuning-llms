@@ -1,0 +1,32 @@
+{
+  "image": "gen_receipt_empty_005.jpg",
+  "ground_truth": {
+    "image_path": "gen_receipt_empty_005.jpg",
+    "filename": "gen_receipt_empty_005.jpg",
+    "document_type": "empty_unreadable",
+    "ocr": null,
+    "semantics": null,
+    "is_stability": true,
+    "stability_type": "empty"
+  },
+  "prediction": {
+    "document_type": "empty_unreadable",
+    "ocr": {
+      "merchant_name": null,
+      "date": null,
+      "time": null,
+      "line_items": [],
+      "subtotal": null,
+      "tax": null,
+      "total": null,
+      "payment_method": null
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.0
+  }
+}

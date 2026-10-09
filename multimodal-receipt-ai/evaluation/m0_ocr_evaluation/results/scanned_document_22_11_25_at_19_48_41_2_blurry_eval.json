@@ -1,0 +1,93 @@
+{
+  "image": "scanned_document_22_11_25_at_19_48_41_2_blurry.jpg",
+  "ground_truth": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "LIDL",
+      "date": "28.08.2025",
+      "time": "19:34",
+      "line_items": [
+        {
+          "raw_text": "M\u00f6hren 1kg",
+          "raw_price": 1.19
+        },
+        {
+          "raw_text": "Preisvorteil",
+          "raw_price": -0.1
+        },
+        {
+          "raw_text": "Erdnusskerne 0,99 x 2",
+          "raw_price": 1.98
+        },
+        {
+          "raw_text": "Papiertraget.",
+          "raw_price": 0.2
+        },
+        {
+          "raw_text": "Putenbrustfilet",
+          "raw_price": 6.99
+        }
+      ],
+      "subtotal": 9.57,
+      "tax": 0.69,
+      "total": 10.26,
+      "payment_method": "Kreditkarte"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.98
+  },
+  "prediction": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "Lidl",
+      "date": "28.08.2025",
+      "time": "19:33",
+      "line_items": [
+        {
+          "raw_text": "Putenbrustfilet",
+          "raw_price": 6.99
+        },
+        {
+          "raw_text": "zu zahlen",
+          "raw_price": 10.26
+        },
+        {
+          "raw_text": "Kreditkarte",
+          "raw_price": 10.26
+        },
+        {
+          "raw_text": "Gesamter Preisvorteil",
+          "raw_price": 0.1
+        },
+        {
+          "raw_text": "MWST%",
+          "raw_price": 0.66
+        },
+        {
+          "raw_text": "MWST + Netto = Brutto",
+          "raw_price": 9.4
+        },
+        {
+          "raw_text": "Summe",
+          "raw_price": 10.26
+        }
+      ],
+      "subtotal": 10.26,
+      "tax": 0.66,
+      "total": 10.26,
+      "payment_method": "MasterCard"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.95
+  }
+}

@@ -1,0 +1,66 @@
+  # Task-Specific Configuration: Teacher Labels Generation
+default:
+  paths:
+    data_dir: "data"
+    sources_dir: "data/sources"
+    artifacts_dir: "artifacts"
+    manifests_dir: "data/manifests"
+    logs_dir: "logs"
+    cache_dir: "cache"
+
+  models:
+    dev_teacher:
+      name: "gemini-3-flash-preview" # Qwen/Qwen3-VL-8B-Instruct
+      dtype: "float32"
+      device: "cpu"
+      attn_implementation: "sdpa"
+      trust_remote_code: true
+      load_in_8bit: false
+      load_in_4bit: false
+    prod_teacher:
+      name: "gemini-3-flash-preview"
+      dtype: "float32"
+      device: "cpu"
+      attn_implementation: "sdpa"
+      trust_remote_code: true
+      load_in_8bit: false
+      load_in_4bit: false
+
+  data:
+    dtype: "float32"
+    ignore_index: -100
+    prompt_files:
+      prompt: prompts/teacher_inference.yaml
+      schema: prompts/schema/teacher_inference.json
+  
+  data_prep:
+    max_pixels: 1048576 # 1024 * 1024
+    max_side: 1024
+    num_workers: 4
+
+  generation:
+    batch_size: 10
+    greedy: false
+    top_p: 0.8
+    top_k: 20
+    temperature: 1
+    repetition_penalty: 1.0
+    out_seq_length: 10240
+
+  logging:
+    level: "INFO"
+    wandb_project: "multimodal-receipt-ai/teacher-labels-generation"
+
+dev:
+  logging:
+    level: "DEBUG"
+  training:
+    batch_size: 1
+    num_workers: 0
+
+prod:
+  training:
+    batch_size: 4
+    num_workers: 8
+  logging:
+    level: "INFO"

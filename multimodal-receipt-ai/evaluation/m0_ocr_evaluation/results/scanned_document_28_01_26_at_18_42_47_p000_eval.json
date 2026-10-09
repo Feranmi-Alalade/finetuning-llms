@@ -1,0 +1,69 @@
+{
+  "image": "scanned_document_28_01_26_at_18_42_47_p000.jpg",
+  "ground_truth": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "LIDL",
+      "date": "2026-01-26",
+      "time": "11:39",
+      "line_items": [
+        {
+          "raw_text": "Zwiebeln rot",
+          "raw_price": 0.99
+        },
+        {
+          "raw_text": "Eier Bodenhalt. 18er",
+          "raw_price": 4.19
+        },
+        {
+          "raw_text": "Puten-Oberkeule",
+          "raw_price": 5.29
+        }
+      ],
+      "subtotal": 9.79,
+      "tax": 0.68,
+      "total": 10.47,
+      "payment_method": "Mastercard"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 1.0
+  },
+  "prediction": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "LIDL",
+      "date": "26.01.2026",
+      "time": "11:39",
+      "line_items": [
+        {
+          "raw_text": "Zwiebeln rot",
+          "raw_price": 0.99
+        },
+        {
+          "raw_text": "Eier Bodenhalt. 18er",
+          "raw_price": 4.19
+        },
+        {
+          "raw_text": "Puten-Oberkeule",
+          "raw_price": 5.29
+        }
+      ],
+      "subtotal": 10.47,
+      "tax": 0.68,
+      "total": 10.47,
+      "payment_method": "MasterCard"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.95
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "image": "scanned_document_22_11_25_at_19_18_28_2.jpg",
+  "ground_truth": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "Lidl",
+      "date": "03.11.2025",
+      "time": "18:48",
+      "line_items": [
+        {
+          "raw_text": "Bauerngurken",
+          "raw_price": 2.99
+        },
+        {
+          "raw_text": "Preisvorteil",
+          "raw_price": -0.5
+        },
+        {
+          "raw_text": "Cornflakes 1,45 x 2",
+          "raw_price": 2.9
+        },
+        {
+          "raw_text": "Eier Bodenhalt. 18er",
+          "raw_price": 3.39
+        },
+        {
+          "raw_text": "Pepsi Zero Zucker 0,88 x 2",
+          "raw_price": 1.76
+        },
+        {
+          "raw_text": "Pfand 0,25 M 0,25 x 2",
+          "raw_price": 0.5
+        },
+        {
+          "raw_text": "Family Sens.Shower",
+          "raw_price": 1.12
+        },
+        {
+          "raw_text": "Colgate Max Fresh",
+          "raw_price": 2.49
+        },
+        {
+          "raw_text": "Colgate Sensation W.",
+          "raw_price": 2.49
+        },
+        {
+          "raw_text": "Zahncreme spez.E-Sen",
+          "raw_price": 0.85
+        },
+        {
+          "raw_text": "Puten-Oberkeule",
+          "raw_price": 5.29
+        }
+      ],
+      "subtotal": 23.28,
+      "tax": 2.39,
+      "total": 23.28,
+      "payment_method": "Mastercard"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.97
+  },
+  "prediction": {
+    "error": "Failed to parse JSON: Expecting ',' delimiter: line 127 column 8 (char 2692)",
+    "raw": "\n{\n  \"document_type\": \"receipt\",\n  \"ocr\": {\n    \"merchant_name\": \"Planegger Str. 2\",\n    \"date\": \"03.11.2025\",\n    \"time\": \"18:48\",\n    \"line_items\": [\n      {\n        \"raw_text\": \"Bauerngurken\",\n        \"raw_price\": 2.99\n      },\n      {\n        \"raw_text\": \"Preisvorteil\",\n        \"raw_price\": 0.50\n      },\n      {\n        \"raw_text\": \"Cornflakes\",\n        \"raw_price\": 2.90\n      },\n      {\n        \"raw_text\": \"Eier Bodenhalt. 18er\",\n        \"raw_price\": 3.39\n      },\n      {\n        \"raw_text\": \"Pepsi Zero Zucker\",\n        \"raw_price\": 1.76\n      },\n      {\n        \"raw_text\": \"Pfand 0,25 M\",\n        \"raw_price\": 0.50\n      },\n      {\n        \"raw_text\": \"Family Sens.Shower\",\n        \"raw_price\": 2.49\n      },\n      {\n        \"raw_text\": \"Colgate Max Fresh\",\n        \"raw_price\": 2.49\n      },\n      {\n        \"raw_text\": \"Colgate Sensation W.\",\n        \"raw_price\": 0.85\n      },\n      {\n        \"raw_text\": \"Zahncreme spez.E-Sen\",\n        \"raw_price\": 5.29\n      },\n      {\n        \"raw_text\": \"Puten-Oberkeule\",\n        \"raw_price\": 2.99\n      },\n      {\n        \"raw_text\": \"zu zahlen\",\n        \"raw_price\": 23.28\n      },\n      {\n        \"raw_text\": \"Kreditkarte\",\n        \"raw_price\": 23.28\n      },\n      {\n        \"raw_text\": \"Gesamter Preisvorteil\",\n        \"raw_price\": 0.50\n      },\n      {\n        \"raw_text\": \"MWST%\",\n        \"raw_price\": 0.92\n      },\n      {\n        \"raw_text\": \"MWST\",\n        \"raw_price\": 1.47\n      },\n      {\n        \"raw_text\": \"Netto\",\n        \"raw_price\": 7.74\n      },\n      {\n        \"raw_text\": \"Brutto\",\n        \"raw_price\": 14.07\n      },\n      {\n        \"raw_text\": \"Summe\",\n        \"raw_price\": 2.39\n      },\n      {\n        \"raw_text\": \"TSE Transaktionsnummer: 81151\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"Seriennr. Kasse: LDL-000-6268-81\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"Seriennr. TSE: 7z006z2Sefsn8snoaxx4cVs4Z5r\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"Pr\u00fcfwert: kePblq1H7UuD7v1xWRj23foXq9a3u10c\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"38CC1y2coDGCbx0iyU4Yi93/YFbYmPbzEr+b9LY4IE\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"IOe/Z1AoiHsjiu3LoTDmGfynHUEYAJHGP7mjaZ83n\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"1d+a7xPp9jTZ\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"Signaturz\u00e4hler: 162500\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"2025-11-03T17:48:16.000Z\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"2025-11-03T17:50:29.000Z\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"6268 037981/81\",\n        \"raw_price\": 0\n      },\n     \n\n"
+  }
+}

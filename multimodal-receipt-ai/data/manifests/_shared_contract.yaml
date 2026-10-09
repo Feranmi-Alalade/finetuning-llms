@@ -1,0 +1,92 @@
+# ============================
+# SHARED DATA & TRAINING CONTRACT
+# ============================
+
+version: 1.0
+applies_to:
+  - m0_ocr
+  - m1_semantic
+  - merged_end_to_end
+
+# ----------------------------
+# IDENTITY & GROUPING
+# ----------------------------
+identity:
+  receipt_id:
+    description: >
+      Stable identifier representing a logical receipt.
+      All image variants (base, blur, crop, rotation) MUST share the same receipt_id.
+    scope: receipt
+
+  image_id:
+    description: >
+      Unique identifier for a single image file.
+    scope: image
+
+  line_item_id:
+    description: >
+      Stable identifier for a line item within a receipt.
+      Preserved across OCR and semantic stages.
+    scope: line_item
+
+# ----------------------------
+# DATA LEVELS
+# ----------------------------
+levels:
+  receipt_level:
+    description: >
+      Supervision applies to the entire image or document.
+    examples: [OCR fields, totals, payment method]
+
+  line_item_level:
+    description: >
+      Supervision applies per extracted line item.
+    examples: [canonical_name, quantity, category]
+
+# ----------------------------
+# SPLITTING POLICY
+# ----------------------------
+splitting:
+  strategy: hash
+  unit: receipt_id
+  seed: 42
+  no_cross_split_variants: true
+  description: >
+    Prevents leakage: all variants of a receipt
+    must belong to the same split.
+
+# ----------------------------
+# CONFIDENCE & UNCERTAINTY
+# ----------------------------
+confidence:
+  teacher_min_confidence: 0.70
+  synthetic_confidence_cap: 0.30
+
+  interpretation:
+    0.0: completely unreliable
+    0.5: partial / uncertain
+    1.0: highly reliable
+
+# ----------------------------
+# OCR IMMUTABILITY RULE
+# ----------------------------
+ocr_contract:
+  ocr_text_is_immutable: true
+  description: >
+    Downstream models (M1, merged) must NEVER alter
+    OCR tokens produced by M0 or the teacher.
+
+# ----------------------------
+# STABILITY DATA RULES
+# ----------------------------
+stability:
+  labels_are_authoritative: true
+  teacher_disabled_for:
+    - empty
+    - non_receipt
+
+# ----------------------------
+# SEQUENCE LIMITS
+# ----------------------------
+model_limits:
+  max_sequence_length: 2048

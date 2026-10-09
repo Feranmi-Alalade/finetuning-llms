@@ -1,0 +1,5 @@
+# Dataset Configuration
+batch_size: 1
+num_workers: 0
+max_length: 8192
+task_type: structured

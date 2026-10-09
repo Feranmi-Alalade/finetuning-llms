@@ -1,0 +1,84 @@
+{
+  "image": "scanned_document_26_11_25_at_17_15_30_p000_low_contrast.jpg",
+  "ground_truth": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "LIDL",
+      "date": "2025-07-09",
+      "time": "19:49",
+      "line_items": [
+        {
+          "raw_text": "Bananen Fairtra 1,464 kg x 1,69 EUR/kg",
+          "raw_price": 2.47
+        },
+        {
+          "raw_text": "Orangen",
+          "raw_price": 3.79
+        },
+        {
+          "raw_text": "Zwiebeln rot",
+          "raw_price": 1.99
+        },
+        {
+          "raw_text": "Gurken",
+          "raw_price": 0.49
+        },
+        {
+          "raw_text": "Zitronen 750g",
+          "raw_price": 2.09
+        },
+        {
+          "raw_text": "Nescaf\u00e9 Gold",
+          "raw_price": 11.99
+        },
+        {
+          "raw_text": "Red Bull Energy",
+          "raw_price": 5.25
+        },
+        {
+          "raw_text": "Pfand 1,50 M",
+          "raw_price": 1.5
+        },
+        {
+          "raw_text": "Edelvollmilch Mandel",
+          "raw_price": 1.39
+        },
+        {
+          "raw_text": "Erdnusskerne 1,29 x 2",
+          "raw_price": 2.58
+        },
+        {
+          "raw_text": "Preisvorteil",
+          "raw_price": -0.6
+        },
+        {
+          "raw_text": "Perman.-Tragetasche",
+          "raw_price": 0.55
+        },
+        {
+          "raw_text": "Deo Roller Pure fres",
+          "raw_price": 0.6
+        },
+        {
+          "raw_text": "Rexona Deo CottonDry",
+          "raw_price": 2.25
+        }
+      ],
+      "subtotal": 36.34,
+      "tax": 3.33,
+      "total": 36.34,
+      "payment_method": "MasterCard"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.98
+  },
+  "prediction": {
+    "error": "Failed to parse JSON: Expecting ',' delimiter: line 131 column 8 (char 2765)",
+    "raw": "\n{\n  \"document_type\": \"receipt\",\n  \"ocr\": {\n    \"merchant_name\": \"LIDL\",\n    \"date\": \"09.07.2025\",\n    \"time\": \"19:48\",\n    \"line_items\": [\n      {\n        \"raw_text\": \"Bananen Fairtra\",\n        \"raw_price\": 2.47\n      },\n      {\n        \"raw_text\": \"1,464 kg x 1,69\",\n        \"raw_price\": 2.47\n      },\n      {\n        \"raw_text\": \"Orangen\",\n        \"raw_price\": 3.79\n      },\n      {\n        \"raw_text\": \"Zwiebeln rot\",\n        \"raw_price\": 1.99\n      },\n      {\n        \"raw_text\": \"Gurken\",\n        \"raw_price\": 0.49\n      },\n      {\n        \"raw_text\": \"Nescaf\u00e9 Gold\",\n        \"raw_price\": 11.99\n      },\n      {\n        \"raw_text\": \"Red Bull Energy\",\n        \"raw_price\": 5.25\n      },\n      {\n        \"raw_text\": \"Pfand 1,50 M\",\n        \"raw_price\": 1.50\n      },\n      {\n        \"raw_text\": \"Edelvollmilch Mandel\",\n        \"raw_price\": 1.39\n      },\n      {\n        \"raw_text\": \"Erdnusskerne\",\n        \"raw_price\": 2.58\n      },\n      {\n        \"raw_text\": \"Preisvorteil\",\n        \"raw_price\": -0.60\n      },\n      {\n        \"raw_text\": \"Perman.-Tragetasche\",\n        \"raw_price\": 0.55\n      },\n      {\n        \"raw_text\": \"Deo Roller Pure fres\",\n        \"raw_price\": 0.60\n      },\n      {\n        \"raw_text\": \"Rexona Den CottonDry\",\n        \"raw_price\": 2.25\n      },\n      {\n        \"raw_text\": \"zu zahlen\",\n        \"raw_price\": 36.34\n      },\n      {\n        \"raw_text\": \"Kreditkarte\",\n        \"raw_price\": 36.34\n      },\n      {\n        \"raw_text\": \"Gesamter Preisvorteil\",\n        \"raw_price\": 0.60\n      },\n      {\n        \"raw_text\": \"MWST%\",\n        \"raw_price\": 1.71\n      },\n      {\n        \"raw_text\": \"Netto\",\n        \"raw_price\": 24.48\n      },\n      {\n        \"raw_text\": \"Brutto\",\n        \"raw_price\": 26.19\n      },\n      {\n        \"raw_text\": \"Summe\",\n        \"raw_price\": 3.33\n      },\n      {\n        \"raw_text\": \"33,01\",\n        \"raw_price\": 36.34\n      },\n      {\n        \"raw_text\": \"TSE Transaktionsnummer: 1638048\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"Serienr. Kasse: LDL-000-6268-1\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"Serienr. TSE: D2rARTIEmQPJyg8NVWJhQewynHT\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"hQ/mICO7bVPI1LoI=\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"Pr\u00fcfwert: +A4t/QeTzzc436aR/bYerf10Xp9PKPu2\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"FfbbDAEYLszR7QOpMBfoTnPesY877sNbEwPikXFpcD\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"CIWn8TqS9opGJusDaZrfEuHpcC3rE5RYXk8anyPJrJ\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"2XefayyahU9y\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"Signaturz\u00e4hler: 3323412\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"2025-07-09T17:4\n\n"
+  }
+}

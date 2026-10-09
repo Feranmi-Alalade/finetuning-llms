@@ -1,0 +1,65 @@
+{
+  "image": "scanned_document_26_11_25_at_11_37_12_p000_low_contrast.jpg",
+  "ground_truth": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "EDEKA Pasinger Marienplatz",
+      "date": "05.08.25",
+      "time": "09:17",
+      "line_items": [
+        {
+          "raw_text": "G&G Vollkorntoast",
+          "raw_price": 0.79
+        },
+        {
+          "raw_text": "Rispen-Tomat 0,664 kg x 0,88 \u20ac/kg",
+          "raw_price": 0.58
+        }
+      ],
+      "subtotal": 1.37,
+      "tax": 0.09,
+      "total": 1.37,
+      "payment_method": "Mastercard"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.98
+  },
+  "prediction": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "EDEKA",
+      "date": "05.08.25",
+      "time": "09:17",
+      "line_items": [
+        {
+          "raw_text": "G&G Vollkorntoast",
+          "raw_price": 0.79
+        },
+        {
+          "raw_text": "Rispen-Tomat",
+          "raw_price": 0.58
+        },
+        {
+          "raw_text": "0,664 kg x",
+          "raw_price": 0.88
+        }
+      ],
+      "subtotal": 1.37,
+      "tax": 0.09,
+      "total": 1.37,
+      "payment_method": "Mastercard"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.95
+  }
+}

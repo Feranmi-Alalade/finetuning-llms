@@ -1,0 +1,30 @@
+{
+    "semantics": {
+        "items": [
+            {
+                "raw_text_ref": "string",
+                "canonical_name": "string or null",
+                "category": "Food & Grocery | Fresh Produce | Bakery & Bread | Beverages | Personal Care & Hygiene | Household & Cleaning | OTC Health & Wellness | Baby & Child Care | Pet Care | Other | Unknown",
+                "quantity": "number or null",
+                "unit_type": "count | weight | volume | unknown",
+                "unit": "string or null",
+                "price_per_unit": "number or null",
+                "total_price": "number or null",
+                "line_role": "product | discount | deposit_charge | deposit_return | tax | subtotal | total | info | unknown",
+                "semantic_confidence": "number (0-1)"
+            }
+        ],
+        "detected_discounts": [
+            {
+                "description": "string",
+                "amount": "number or null"
+            }
+        ],
+        "detected_deposits": [
+            {
+                "description": "string",
+                "amount": "number or null"
+            }
+        ]
+    }
+}

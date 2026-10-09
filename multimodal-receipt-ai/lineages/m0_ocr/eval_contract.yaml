@@ -1,0 +1,47 @@
+# M0 OCR Evaluation Contract
+# These thresholds must be met for the model to be considered valid
+
+name: "M0_OCR"
+description: "Pure OCR model - vision to text transcription"
+
+# Metric thresholds
+thresholds:
+  cer:  # Character Error Rate
+    max: 0.10  # Must be <= 10%
+    description: "Character-level transcription accuracy"
+  
+  wer:  # Word Error Rate
+    max: 0.20  # Must be <= 20%
+    description: "Word-level transcription accuracy"
+  
+  exact_match:
+    min: 0.30  # At least 30% perfect matches
+    description: "Percentage of perfectly transcribed receipts"
+
+# Stability requirements
+stability:
+  empty_image_handling:
+    description: "Must not hallucinate content on empty images"
+    required: true
+  
+  non_receipt_handling:
+    description: "Must indicate when input is not a receipt"
+    required: true
+
+# Explicit capabilities
+supports:
+  - "Raw text transcription"
+  - "Line-level layout preservation"
+  - "Basic field extraction (date, total, merchant)"
+
+does_not_support:
+  - "Semantic understanding"
+  - "Item canonicalization"
+  - "Category classification"
+  - "External knowledge integration"
+
+# Regression prevention
+regression_baselines:
+  # If M0 is updated, these metrics from previous version must not degrade
+  baseline_version: null  # First model, no baseline yet
+  metrics: []

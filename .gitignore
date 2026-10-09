@@ -1,0 +1,91 @@
+# Datasets
+multimodal-receipt-ai/data/sources
+data/processed/
+*.jsonl
+*.csv
+*.tsv
+*.parquet
+
+# Model checkpoints and outputs
+outputs/
+logs/
+models/**/safetensors/
+models/**/gguf/
+models/**/mlx/
+*.pth
+*.bin
+*.safetensors
+*.gguf
+*.mlx
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb
+
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.conda
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs and temp
+*.log
+tensorboard_logs/
+wandb/
+temp/
+tmp/
+
+# Keep empty directories
+!.gitkeep
+!*/
+
+# Keep configs and documentation
+!*.yaml
+!*.yml
+!*.md
+!*.py
+
+.cache/
+multimodal-receipt-ai/data/sources/receipts_raw/
+multimodal-receipt-ai/.cache/
+multimodal-receipt-ai/test_cache/
+multimodal-receipt-ai/artifacts/
+multimodal-receipt-ai/cache/
+.vscode/
+multimodal-receipt-ai/wandb/
+multimodal-receipt-ai/outputs/
+multimodal-receipt-ai/llama.cpp/

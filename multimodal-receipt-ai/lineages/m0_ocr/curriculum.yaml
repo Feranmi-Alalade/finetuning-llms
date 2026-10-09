@@ -1,0 +1,5 @@
+# Curriculum Configuration
+stages:
+  - name: full_training
+    epochs: 1
+    description: "Train on all data"

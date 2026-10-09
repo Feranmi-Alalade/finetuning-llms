@@ -1,0 +1,69 @@
+{
+  "image": "scanned_document_26_11_25_at_17_21_16_p000.jpg",
+  "ground_truth": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "REWE-Markt GmbH",
+      "date": "20.08.2025",
+      "time": "19:33:10",
+      "line_items": [
+        {
+          "raw_text": "FELDSALAT MIX",
+          "raw_price": 0.79
+        },
+        {
+          "raw_text": "EISBERG STREIFEN",
+          "raw_price": 1.99
+        },
+        {
+          "raw_text": "BABYSPINAT BIO",
+          "raw_price": 1.69
+        }
+      ],
+      "subtotal": null,
+      "tax": 0.29,
+      "total": 4.47,
+      "payment_method": "Mastercard"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.99
+  },
+  "prediction": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "REWE CITY",
+      "date": "20.08.2025",
+      "time": "19:33:10",
+      "line_items": [
+        {
+          "raw_text": "FELDSALAT MIX",
+          "raw_price": 0.79
+        },
+        {
+          "raw_text": "EISBERG STREIFEN",
+          "raw_price": 1.99
+        },
+        {
+          "raw_text": "BABYSPINAT BIO",
+          "raw_price": 1.69
+        }
+      ],
+      "subtotal": 4.47,
+      "tax": 0.29,
+      "total": 4.47,
+      "payment_method": "DEBIT MASTERCARD"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.95
+  }
+}

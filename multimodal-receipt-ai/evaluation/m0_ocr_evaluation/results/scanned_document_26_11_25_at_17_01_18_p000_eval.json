@@ -1,0 +1,53 @@
+{
+  "image": "scanned_document_26_11_25_at_17_01_18_p000.jpg",
+  "ground_truth": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "REWE CITY",
+      "date": "23.09.2025",
+      "time": "19:19:45",
+      "line_items": [
+        {
+          "raw_text": "EISBERG STREIFEN",
+          "raw_price": 1.99
+        }
+      ],
+      "subtotal": 1.99,
+      "tax": 0.13,
+      "total": 1.99,
+      "payment_method": "Mastercard"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.98
+  },
+  "prediction": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "REWE CITY",
+      "date": "23.09.2025",
+      "time": "19:19:45",
+      "line_items": [
+        {
+          "raw_text": "EISBERG STREIFEN",
+          "raw_price": 1.99
+        }
+      ],
+      "subtotal": 1.99,
+      "tax": 0.13,
+      "total": 1.99,
+      "payment_method": "DEBIT MASTERCARD"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.95
+  }
+}

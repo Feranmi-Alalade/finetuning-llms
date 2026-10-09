@@ -1,0 +1,25 @@
+{
+    "document_type": "receipt | non_receipt | empty_unreadable",
+    "ocr": {
+        "merchant_name": "string or null",
+        "date": "string or null",
+        "time": "string or null",
+        "line_items": [
+            {
+                "raw_text": "string",
+                "raw_price": "number or null"
+            }
+        ],
+        "subtotal": "number or null",
+        "tax": "number or null",
+        "total": "number or null",
+        "payment_method": "string or null"
+    },
+    "quality_flags": {
+        "is_blurry": "boolean",
+        "is_partial": "boolean",
+        "is_rotated": "boolean",
+        "is_low_contrast": "boolean"
+    },
+    "confidence": "number (0-1)"
+}

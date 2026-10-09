@@ -1,0 +1,141 @@
+{
+  "image": "scanned_document_26_11_25_at_17_19_32_p000.jpg",
+  "ground_truth": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "EDEKA Pasinger Marienplatz",
+      "date": "22.03.25",
+      "time": "10:10",
+      "line_items": [
+        {
+          "raw_text": "G&G Sardinen",
+          "raw_price": 0.99
+        },
+        {
+          "raw_text": "G&G Parboiled 1,59 \u20ac x 2",
+          "raw_price": 3.18
+        },
+        {
+          "raw_text": "Teek.Fr\u00fcchtetee",
+          "raw_price": 2.29
+        },
+        {
+          "raw_text": "Bio E.Spaghet 0,85 \u20ac x 2",
+          "raw_price": 1.7
+        },
+        {
+          "raw_text": "G&G Makrelenf 1,29 \u20ac x 2",
+          "raw_price": 2.58
+        },
+        {
+          "raw_text": "Jacobs Cappuccino",
+          "raw_price": 4.29
+        },
+        {
+          "raw_text": "Mc V.Milk Chocola.",
+          "raw_price": 1.99
+        },
+        {
+          "raw_text": "Spitzpaprika",
+          "raw_price": 2.99
+        },
+        {
+          "raw_text": "Teek.Italie.Limone",
+          "raw_price": 2.29
+        },
+        {
+          "raw_text": "Rispen-Tomat 1,246 kg x 2,99 \u20ac/kg",
+          "raw_price": 3.73
+        },
+        {
+          "raw_text": "Mc v.Digestive Or.",
+          "raw_price": 1.99
+        }
+      ],
+      "subtotal": 28.02,
+      "tax": 1.83,
+      "total": 28.02,
+      "payment_method": "Mastercard"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 1.0
+  },
+  "prediction": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "EDEKA Pasinger Marienplatz",
+      "date": "22.03.25",
+      "time": "10:10",
+      "line_items": [
+        {
+          "raw_text": "G&G Sardinen",
+          "raw_price": 0.99
+        },
+        {
+          "raw_text": "G&G Parboiled 1,59 \u20ac x 2",
+          "raw_price": 3.18
+        },
+        {
+          "raw_text": "Teek.Fruchtetee",
+          "raw_price": 2.29
+        },
+        {
+          "raw_text": "Bio E.Spaghetti 0,85 \u20ac x 2",
+          "raw_price": 1.7
+        },
+        {
+          "raw_text": "G&G Makrelenf 1,29 \u20ac x 2",
+          "raw_price": 2.58
+        },
+        {
+          "raw_text": "Jacobs Cappuccino",
+          "raw_price": 4.29
+        },
+        {
+          "raw_text": "Mc V.Milk Chocola.",
+          "raw_price": 1.99
+        },
+        {
+          "raw_text": "Spitzpaprika",
+          "raw_price": 2.99
+        },
+        {
+          "raw_text": "Teek.Italie.Limone",
+          "raw_price": 2.29
+        },
+        {
+          "raw_text": "Rispen-Tomat",
+          "raw_price": 3.73
+        },
+        {
+          "raw_text": "1,246 kg x 2,99 \u20ac/kg",
+          "raw_price": 3.73
+        },
+        {
+          "raw_text": "Mc V.Digestive Or.",
+          "raw_price": 1.99
+        },
+        {
+          "raw_text": "Posten: 14",
+          "raw_price": 0
+        }
+      ],
+      "subtotal": 26.19,
+      "tax": 1.83,
+      "total": 28.02,
+      "payment_method": "Mastercard"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.95
+  }
+}

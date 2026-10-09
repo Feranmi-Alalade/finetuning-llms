@@ -1,0 +1,84 @@
+# M0 OCR Model Training Configuration
+# Supports: CPU (testing), Single GPU, Multi-GPU with FSDP
+
+# === Base Model ===
+# For CPU/Local testing: Use small Qwen models
+# - Qwen/Qwen2-VL-2B-Instruct (2B params, good for CPU testing)
+# - Qwen/Qwen2-VL-7B-Instruct (7B params, for GPU)
+# 
+# For SageMaker ml.g5.12xlarge (4x A10G 24GB):
+# - Qwen/Qwen2-VL-7B-Instruct (recommended)
+# - llava-hf/llava-1.5-7b-hf
+#
+# For SageMaker ml.p4d.24xlarge (8x A100 40GB):
+# - Qwen/Qwen2.5-VL-7B-Instruct (Recommended student)
+# - Qwen/Qwen2.5-VL-3B-Instruct (Local student)
+
+base_model: "Qwen/Qwen2.5-VL-3B-Instruct"
+
+# === Training Strategy ===
+# ✅ Freeze vision encoder: true (always)
+# ✅ Freeze projector: true (always)
+# ✅ LoRA on LLM: true
+
+# === LoRA Configuration ===
+# Smaller values for CPU/testing, larger for production
+lora_r: 64               # Rank: 32 (CPU), 64 (1-GPU), 128 (multi-GPU)
+lora_alpha: 128          # Scaling: 2x rank
+lora_dropout: 0.05       # Regularization
+lora_target_modules:     # Qwen2-VL modules (auto-detected if null)
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+
+# === Quantization ===
+# CPU: false (uses float32)
+# Single GPU <24GB: use 8-bit or 4-bit
+# Multi-GPU or >24GB: false
+load_in_4bit: false      # Enable for <16GB GPU
+load_in_8bit: false      # Enable for 16-24GB GPU
+
+# === Training Hyperparameters ===
+learning_rate: 2.0e-4    # Standard LoRA LR
+weight_decay: 0.0        # Usually 0 for LoRA
+max_epochs: 1            # 1-2 for CPU testing, 3-5 for production
+
+# Batch sizes - adjust based on hardware:
+# CPU: 1
+# Single GPU 24GB: 2-4
+# Multi-GPU (FSDP): 4-8 per device
+batch_size: 1
+
+# Gradient accumulation - effective batch = batch_size * accum * num_gpus
+# CPU: 1-2
+# Single GPU: 4-8
+# Multi-GPU: 2-4
+gradient_accumulation_steps: 4
+
+max_grad_norm: 1.0       # Gradient clipping
+
+# === Precision ===
+# CPU: 32-true (auto-selected)
+# GPU with bf16: bf16-mixed (A100, H100)
+# GPU without bf16: 16-mixed (V100, T4)
+precision: "bf16-mixed"
+
+# === Learning Rate Schedule ===
+warmup_ratio: 0.03       # 3% warmup
+scheduler: "cosine"      # Cosine decay
+
+# === Validation ===
+val_check_interval: 0.25       # Check 4x per epoch
+early_stopping_patience: 3     # Stop if no improvement
+
+# === Distributed Training (Multi-GPU) ===
+use_fsdp: true           # Use FSDP for multi-GPU (recommended for >1 GPU)
+# Alternative: set to false for DDP
+
+# === SageMaker Specific ===
+# These are auto-detected from environment variables
+# SM_MODEL_DIR, SM_OUTPUT_DATA_DIR, SM_CHECKPOINT_DIR

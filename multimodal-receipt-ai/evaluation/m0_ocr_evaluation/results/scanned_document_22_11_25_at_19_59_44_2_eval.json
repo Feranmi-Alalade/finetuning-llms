@@ -1,0 +1,177 @@
+{
+  "image": "scanned_document_22_11_25_at_19_59_44_2.jpg",
+  "ground_truth": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "Lidl",
+      "date": "16.08.2025",
+      "time": "18:55",
+      "line_items": [
+        {
+          "raw_text": "Orangen",
+          "raw_price": 3.79
+        },
+        {
+          "raw_text": "Kartoffelspalten",
+          "raw_price": 1.79
+        },
+        {
+          "raw_text": "H\u00e4hnch.Drumstick BBQ",
+          "raw_price": 3.99
+        },
+        {
+          "raw_text": "Cornflakes",
+          "raw_price": 1.45
+        },
+        {
+          "raw_text": "Fr.Eier.a. Bodenhal.",
+          "raw_price": 1.99
+        },
+        {
+          "raw_text": "H-Milch3,5% HF3",
+          "raw_price": 1.09
+        },
+        {
+          "raw_text": "Apfelschorle",
+          "raw_price": 1.19
+        },
+        {
+          "raw_text": "Lidl Plus Rabatt",
+          "raw_price": -0.12
+        },
+        {
+          "raw_text": "Pfand 0,25 EM",
+          "raw_price": 0.25
+        },
+        {
+          "raw_text": "Coca Cola Zero",
+          "raw_price": 1.39
+        },
+        {
+          "raw_text": "Pfand 0,25 M",
+          "raw_price": 0.25
+        },
+        {
+          "raw_text": "FruchtnektarM/M",
+          "raw_price": 1.49
+        },
+        {
+          "raw_text": "FruchtnektarM/M",
+          "raw_price": 1.49
+        },
+        {
+          "raw_text": "M\u00fcllbeutel 25l",
+          "raw_price": 0.65
+        },
+        {
+          "raw_text": "Fri.H\u00e4hnchenschenkel",
+          "raw_price": 5.29
+        },
+        {
+          "raw_text": "Pfandr\u00fcckgabe",
+          "raw_price": -1.5
+        },
+        {
+          "raw_text": "-6 x 0,25",
+          "raw_price": null
+        }
+      ],
+      "subtotal": 22.4,
+      "tax": 2.08,
+      "total": 24.48,
+      "payment_method": "Kreditkarte"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.99
+  },
+  "prediction": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "Lidl",
+      "date": "16.08.2025",
+      "time": "18:58",
+      "line_items": [
+        {
+          "raw_text": "Orangen",
+          "raw_price": 3.79
+        },
+        {
+          "raw_text": "Kartoffelspalten",
+          "raw_price": 1.79
+        },
+        {
+          "raw_text": "H\u00e4hnch.Drumstick BBQ",
+          "raw_price": 3.99
+        },
+        {
+          "raw_text": "Cornflakes",
+          "raw_price": 1.45
+        },
+        {
+          "raw_text": "Fr.Eier.a. Bodenhal.",
+          "raw_price": 1.99
+        },
+        {
+          "raw_text": "H-Milch3,5% HF3",
+          "raw_price": 1.09
+        },
+        {
+          "raw_text": "Apfelschorle",
+          "raw_price": 1.19
+        },
+        {
+          "raw_text": "Lidl Plus Rabatt",
+          "raw_price": 0.12
+        },
+        {
+          "raw_text": "Pfand 0,25 EM",
+          "raw_price": 0.25
+        },
+        {
+          "raw_text": "Coca Cola Zero",
+          "raw_price": 1.39
+        },
+        {
+          "raw_text": "Pfand 0,25 M",
+          "raw_price": 0.25
+        },
+        {
+          "raw_text": "Fruchtnektar M/M",
+          "raw_price": 1.49
+        },
+        {
+          "raw_text": "Fruchtnektar M/M",
+          "raw_price": 1.49
+        },
+        {
+          "raw_text": "M\u00fcllbeutel 251",
+          "raw_price": 0.65
+        },
+        {
+          "raw_text": "Fri.H\u00e4hnchenschenkel",
+          "raw_price": 5.29
+        },
+        {
+          "raw_text": "Pfandr\u00fcckgabe",
+          "raw_price": -1.5
+        }
+      ],
+      "subtotal": 22.4,
+      "tax": 1.27,
+      "total": 24.48,
+      "payment_method": "MasterCard"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.95
+  }
+}

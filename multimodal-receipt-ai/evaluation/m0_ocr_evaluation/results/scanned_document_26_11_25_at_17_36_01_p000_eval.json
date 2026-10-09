@@ -1,0 +1,32 @@
+{
+  "image": "scanned_document_26_11_25_at_17_36_01_p000.jpg",
+  "ground_truth": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "dm-drogerie markt",
+      "date": "16.07.2025",
+      "time": "19:33",
+      "line_items": [
+        {
+          "raw_text": "Permanenttragetasche gro\u00df",
+          "raw_price": 1.0
+        }
+      ],
+      "subtotal": null,
+      "tax": 0.16,
+      "total": 1.0,
+      "payment_method": "DEBIT MASTERCARD"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 1.0
+  },
+  "prediction": {
+    "error": "Failed to parse JSON: Expecting ',' delimiter: line 139 column 8 (char 2800)",
+    "raw": "\n{\n  \"document_type\": \"receipt\",\n  \"ocr\": {\n    \"merchant_name\": \"dm-drogerie markt\",\n    \"date\": \"16.07.2025\",\n    \"time\": \"19:33\",\n    \"line_items\": [\n      {\n        \"raw_text\": \"Permanenttragetasche grob\",\n        \"raw_price\": 1.0\n      },\n      {\n        \"raw_text\": \"SUMME EUR\",\n        \"raw_price\": 1.0\n      },\n      {\n        \"raw_text\": \"MasterCard EUR\",\n        \"raw_price\": 1.0\n      },\n      {\n        \"raw_text\": \"MwSt-Satz\",\n        \"raw_price\": 0.19\n      },\n      {\n        \"raw_text\": \"Brutto\",\n        \"raw_price\": 1.0\n      },\n      {\n        \"raw_text\": \"Netto\",\n        \"raw_price\": 0.84\n      },\n      {\n        \"raw_text\": \"MwSt\",\n        \"raw_price\": 0.16\n      },\n      {\n        \"raw_text\": \"\u00f6ffnungszeiten auf dm.de\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"Steuer-Nr.:34092/30007\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"**** FISKALINFORMATIONEN (TSE) ****\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"Start:\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"2025-07-16 19:33:52\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"Ende:\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"2025-07-16 19:34:04\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"SN-Kasse: FD180615\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"TA-Nummer: 221330\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"SN-TSE: 05da816096585bd03668cafcceb9d6c21ee\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"21cad44649763790c0c75643274eb5\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"Signaturz\u00e4hler: 442299\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"Signatur: Cza9ic-T\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"HL+Q1Np+ed1G\u00dd17Jwf9JBcA8HPvdogH cflTgfyzi\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"RfFPgdLGiPacu1XhcMWkuEpT3K2Zr74El\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"RQ: =\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"* * Kundenbeleg * *\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"Datum:\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"16.07.2025\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"Uhrzeit:\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"19:33:56 Uhr\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"Beleg-Nr.\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"9474\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"Trace-Nr.\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"223389\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\": \"Bezahlung\",\n        \"raw_price\": 0\n      },\n      {\n        \"raw_text\":\n\n"
+  }
+}

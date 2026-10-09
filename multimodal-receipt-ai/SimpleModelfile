@@ -1,0 +1,1 @@
+FROM /Users/david/codes-and-scripts/projects/bildcraft/research/finetuning-llms/multimodal-receipt-ai/outputs/fine_tuned_qwen_8b_dev/m0_ocr_lora_20260129_212427_dev_no_custom_loss/m0_q4_k_m.gguf

@@ -1,0 +1,81 @@
+{
+  "image": "scanned_document_26_11_25_at_17_29_24_p000_blurry.jpg",
+  "ground_truth": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "Aldi S\u00fcd",
+      "date": "16.07.2025",
+      "time": "16:38",
+      "line_items": [
+        {
+          "raw_text": "183218 Whisky & Cola 10%",
+          "raw_price": 3.38
+        },
+        {
+          "raw_text": "2 x 1,69",
+          "raw_price": null
+        },
+        {
+          "raw_text": "80000291 Pfand",
+          "raw_price": 0.5
+        },
+        {
+          "raw_text": "2 x 0,25",
+          "raw_price": null
+        },
+        {
+          "raw_text": "265841001 Amer.Style Cookies",
+          "raw_price": 1.39
+        }
+      ],
+      "subtotal": 5.27,
+      "tax": 0.71,
+      "total": 5.27,
+      "payment_method": "DEBIT MASTERCARD"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.98
+  },
+  "prediction": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "Aldi S\u00fcd",
+      "date": "16.07.2025",
+      "time": "16:38",
+      "line_items": [
+        {
+          "raw_text": "2 x 183218 Whisky & Cola 10%",
+          "raw_price": 1.69
+        },
+        {
+          "raw_text": "2 x 0,25",
+          "raw_price": 0.25
+        },
+        {
+          "raw_text": "80000291 Pfand",
+          "raw_price": 0.5
+        },
+        {
+          "raw_text": "265841001 Amer.Style Cookies",
+          "raw_price": 1.39
+        }
+      ],
+      "subtotal": 3.38,
+      "tax": 0.62,
+      "total": 5.27,
+      "payment_method": "DEBIT MASTERCARD"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.95
+  }
+}

@@ -1,0 +1,122 @@
+name: m1_semantic
+stage: m1
+description: >
+  Phase 2: Semantic understanding over OCR text.
+  OCR tokens are immutable inputs.
+
+# ============================
+# OBJECTIVES
+# ============================
+objectives:
+  training:
+    - name: canonical_name_loss
+      type: classification
+      formulation: >
+        \mathcal{L}_{canon} = \mathcal{L}_{CE}(c_i, \hat{c}_i)
+      weight: 0.30
+
+    - name: category_loss
+      type: classification
+      formulation: >
+        \mathcal{L}_{cat} = \mathcal{L}_{CE}(k_i, \hat{k}_i)
+      weight: 0.20
+
+    - name: quantity_unit_loss
+      type: regression + classification
+      formulation: >
+        \mathcal{L}_{qty} + \mathcal{L}_{unit} = \| q_i - \hat{q}_i \|^2 + \mathcal{L}_{CE}(u_i, \hat{u}_i)
+      weight: 0.20
+
+    - name: price_normalization_loss
+      type: regression
+      formulation: >
+        \mathcal{L}_{price} = \| p_i - \hat{p}_i \|^2
+      weight: 0.15
+
+    - name: uncertainty_loss
+      type: calibration
+      formulation: >
+        ECE = \sum_{m=1}^{M} \frac{|B_m|}{n} \left| \text{acc}(B_m) - \text{conf}(B_m) \right|
+      weight: 0.15
+
+  total_loss: >
+    \mathcal{L}_{M1} = 0.30\,\mathcal{L}_{canon} + 0.20\,\mathcal{L}_{cat} + 0.20\,(\mathcal{L}_{qty} + \mathcal{L}_{unit}) + 0.15\,\mathcal{L}_{price} + 0.15\,\mathcal{L}_{ECE}
+
+# ============================
+# SUPERVISION LEVEL
+# ============================
+supervision_level: line_item_level
+
+# ============================
+# DATA SELECTION
+# ============================
+data:
+  requires:
+    - ocr_present: true
+
+  eligible_tags:
+    - base
+    - stability:partial
+
+# ============================
+# DATA MIX (LINE ITEM LEVEL)
+# ============================
+mix:
+  unit: line_item
+  components:
+    standard:
+      weight: 0.65
+      constraints:
+        semantic_risk: none
+
+    edge_cases:
+      weight: 0.35
+      constraints:
+        semantic_risk:
+          any_of:
+            - pfand
+            - discount
+            - positive_amount
+            - weight_based
+            - mixed_vat
+
+# ============================
+# SPLITS
+# ============================
+splits:
+  train: 0.65
+  val: 0.20
+  test: 0.15
+
+# ============================
+# SUPERVISION SOURCE
+# ============================
+supervision:
+  primary: teacher
+  auxiliary: m0_outputs
+  disagreement_policy: teacher_priority
+
+# ============================
+# EVALUATION
+# ============================
+evaluation:
+  metrics:
+    canonical_accuracy:
+      good: ">= 0.90"
+      bad: "<= 0.80"
+
+    category_accuracy:
+      good: ">= 0.92"
+      bad: "<= 0.85"
+
+    quantity_unit_accuracy:
+      good: ">= 0.88"
+      bad: "<= 0.75"
+
+    calibration_ece:
+      good: "<= 0.05"
+      bad: ">= 0.10"
+
+  subsets:
+    clean: { tag: base }
+    edge: { semantic_risk: any }

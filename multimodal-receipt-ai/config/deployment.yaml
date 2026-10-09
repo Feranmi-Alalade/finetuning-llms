@@ -1,0 +1,44 @@
+# Deployment Configuration
+# Defines available models, artifacts, and S3 settings.
+
+defaults:
+  org: "bildcraft"
+
+s3:
+  bucket_env_var: "S3_BUCKET"
+  data_prefix: "data"          # s3://{BUCKET}/data
+  artifacts_prefix: "artifacts" # s3://{BUCKET}/artifacts
+
+models:
+  m0:
+    description: "M0 Stage: OCR & Stability"
+    required_metadata:
+      stage: "m0"
+    
+    targets:
+      huggingface:
+        repo_template: "{org}/qwen3-vl-{size}-m0-ocr-{type}"
+      ollama:
+        model_name: "bildcraft/receipt-ai-m0"
+        
+  m1:
+    description: "M1 Stage: Semantic Understanding"
+    required_metadata:
+      stage: "m1"
+      
+    targets:
+      huggingface:
+        repo_template: "{org}/qwen3-vl-{size}-m1-semantic-{type}"
+      ollama:
+        model_name: "bildcraft/receipt-ai-m1"
+
+  unified:
+    description: "Unified Stage: End-to-End Understanding"
+    required_metadata:
+      stage: "unified"
+      
+    targets:
+      huggingface:
+        repo_template: "{org}/qwen3-vl-{size}-receipt-master-{type}"
+      ollama:
+        model_name: "bildcraft/receipt-ai-unified"

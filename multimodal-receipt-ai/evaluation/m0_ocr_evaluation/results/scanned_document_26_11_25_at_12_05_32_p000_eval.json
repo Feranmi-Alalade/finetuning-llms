@@ -1,0 +1,149 @@
+{
+  "image": "scanned_document_26_11_25_at_12_05_32_p000.jpg",
+  "ground_truth": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "Lidl",
+      "date": "04.07.2025",
+      "time": "09:24",
+      "line_items": [
+        {
+          "raw_text": "Zitronen 750g",
+          "raw_price": 1.99
+        },
+        {
+          "raw_text": "Orangen",
+          "raw_price": 3.69
+        },
+        {
+          "raw_text": "Bitter Lemon 0,49 x 2",
+          "raw_price": 0.98
+        },
+        {
+          "raw_text": "Pfand 0,25 EM 0,25 x 2",
+          "raw_price": 0.5
+        },
+        {
+          "raw_text": "Premium Vodka",
+          "raw_price": 8.99
+        },
+        {
+          "raw_text": "Nusskracker Vollmil. 1,39 x 2",
+          "raw_price": 2.78
+        },
+        {
+          "raw_text": "Edelvollmilch Mandel 1,39 x 2",
+          "raw_price": 2.78
+        },
+        {
+          "raw_text": "Putenbrustfilet",
+          "raw_price": 9.29
+        },
+        {
+          "raw_text": "Preisvorteil",
+          "raw_price": -1.9
+        }
+      ],
+      "subtotal": 29.1,
+      "tax": 2.89,
+      "total": 29.1,
+      "payment_method": "Kreditkarte"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.98
+  },
+  "prediction": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "LIDL",
+      "date": "04.07.2025",
+      "time": "09:24",
+      "line_items": [
+        {
+          "raw_text": "Zitronen 750g",
+          "raw_price": 1.99
+        },
+        {
+          "raw_text": "Orangen",
+          "raw_price": 3.69
+        },
+        {
+          "raw_text": "Bitter Lemon",
+          "raw_price": 0.98
+        },
+        {
+          "raw_text": "Pfand 0,25 EM",
+          "raw_price": 0.25
+        },
+        {
+          "raw_text": "Premium Vodka",
+          "raw_price": 8.99
+        },
+        {
+          "raw_text": "Nusskraut Vollmilch",
+          "raw_price": 2.78
+        },
+        {
+          "raw_text": "Edelvollmilch Mandel",
+          "raw_price": 2.78
+        },
+        {
+          "raw_text": "Putenbrustfilet",
+          "raw_price": 9.29
+        },
+        {
+          "raw_text": "Preisvorteil",
+          "raw_price": -1.9
+        },
+        {
+          "raw_text": "zu zahlen",
+          "raw_price": 29.1
+        },
+        {
+          "raw_text": "Kreditkarte",
+          "raw_price": 29.1
+        },
+        {
+          "raw_text": "Gesamter Preisvorteil",
+          "raw_price": 1.9
+        },
+        {
+          "raw_text": "MWST%",
+          "raw_price": 1.22
+        },
+        {
+          "raw_text": "MWST +",
+          "raw_price": 1.67
+        },
+        {
+          "raw_text": "Netto",
+          "raw_price": 17.41
+        },
+        {
+          "raw_text": "Brutto",
+          "raw_price": 18.63
+        },
+        {
+          "raw_text": "Summe",
+          "raw_price": 26.21
+        }
+      ],
+      "subtotal": 29.1,
+      "tax": 1.9,
+      "total": 29.1,
+      "payment_method": "MasterCard"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.95
+  }
+}

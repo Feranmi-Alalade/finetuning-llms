@@ -1,0 +1,76 @@
+{
+  "image": "scanned_document_26_11_25_at_17_31_31_p000.jpg",
+  "ground_truth": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "Lidl",
+      "date": "18.10.2025",
+      "time": "16:00",
+      "line_items": [
+        {
+          "raw_text": "Speisekartoffel",
+          "raw_price": 2.09
+        },
+        {
+          "raw_text": "Gurken",
+          "raw_price": 0.69
+        },
+        {
+          "raw_text": "Thymian gerebelt",
+          "raw_price": 0.85
+        },
+        {
+          "raw_text": "Lidl Plus Rabatt",
+          "raw_price": -0.09
+        },
+        {
+          "raw_text": "Kr\u00e4uter der Provence",
+          "raw_price": 0.85
+        },
+        {
+          "raw_text": "Lidl Plus Rabatt",
+          "raw_price": -0.09
+        },
+        {
+          "raw_text": "Basilikum",
+          "raw_price": 0.85
+        },
+        {
+          "raw_text": "Lidl Plus Rabatt",
+          "raw_price": -0.09
+        },
+        {
+          "raw_text": "Oregano gerebelt",
+          "raw_price": 0.85
+        },
+        {
+          "raw_text": "Rosmarin",
+          "raw_price": 0.85
+        },
+        {
+          "raw_text": "Puten-Oberkeule",
+          "raw_price": 5.29
+        },
+        {
+          "raw_text": "Pfandr\u00fcckgabe -2 x 0,25",
+          "raw_price": -0.5
+        }
+      ],
+      "subtotal": 10.84,
+      "tax": 0.71,
+      "total": 11.55,
+      "payment_method": "Kreditkarte"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 1.0
+  },
+  "prediction": {
+    "error": "Failed to parse JSON: Expecting ',' delimiter: line 131 column 8 (char 2762)",
+    "raw": "\n{\n  \"document_type\": \"receipt\",\n  \"ocr\": {\n    \"merchant_name\": \"Lidl\",\n    \"date\": \"18.10.2025\",\n    \"time\": \"16:00\",\n    \"line_items\": [\n      {\n        \"raw_text\": \"Speisekartoffel\",\n        \"raw_price\": 2.09\n      },\n      {\n        \"raw_text\": \"Gurken\",\n        \"raw_price\": 0.69\n      },\n      {\n        \"raw_text\": \"Thymian gerebelt\",\n        \"raw_price\": 0.85\n      },\n      {\n        \"raw_text\": \"Lidl Plus Rabatt\",\n        \"raw_price\": -0.09\n      },\n      {\n        \"raw_text\": \"Kr\u00e4uter der Provence\",\n        \"raw_price\": 0.85\n      },\n      {\n        \"raw_text\": \"Lidl Plus Rabatt\",\n        \"raw_price\": -0.09\n      },\n      {\n        \"raw_text\": \"Basilikum\",\n        \"raw_price\": 0.85\n      },\n      {\n        \"raw_text\": \"Lidl Plus Rabatt\",\n        \"raw_price\": -0.09\n      },\n      {\n        \"raw_text\": \"Oregano gerebelt\",\n        \"raw_price\": 0.85\n      },\n      {\n        \"raw_text\": \"Rosmarin\",\n        \"raw_price\": 0.85\n      },\n      {\n        \"raw_text\": \"Puten-Oberkeule\",\n        \"raw_price\": 5.29\n      },\n      {\n        \"raw_text\": \"Pfandr\u00fcckgabe\",\n        \"raw_price\": -0.50\n      },\n      {\n        \"raw_text\": \"-2 x\",\n        \"raw_price\": 0.25\n      },\n      {\n        \"raw_text\": \"zu zahlen\",\n        \"raw_price\": 11.55\n      },\n      {\n        \"raw_text\": \"Kreditkarte\",\n        \"raw_price\": 11.55\n      },\n      {\n        \"raw_text\": \"Gesamter Preisvorteil\",\n        \"raw_price\": 0.27\n      },\n      {\n        \"raw_text\": \"MWST%\",\n        \"raw_price\": 0.79\n      },\n      {\n        \"raw_text\": \"Netto\",\n        \"raw_price\": 11.26\n      },\n      {\n        \"raw_text\": \"Brutto\",\n        \"raw_price\": 12.05\n      },\n      {\n        \"raw_text\": \"Summe\",\n        \"raw_price\": 10.84\n      },\n      {\n        \"raw_text\": \"Mit Lidl Plus\",\n        \"raw_price\": 0.27\n      },\n      {\n        \"raw_text\": \"0,27 EUR gespart\",\n        \"raw_price\": 0.27\n      },\n      {\n        \"raw_text\": \"TSE Transaktionsnummer: 48938\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"Seriennr. Kasse: LDL-000-6268-82\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"Seriennr. TSE: 7z006z2Sefsn8snoaxx4cVs4Z5r\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"rGOnkGvJiD4gpQf0=\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"Pr\u00fcfwert: eR/kfdDLwAEPRb/S+4GCLCyAyd1GTpA\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"9+HdfJgDGfzdHMMQe3sU1uFrq1dGFSAVUTWx326GTQ\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"uAfysdbvEgVisvOYt41UuWGDXAw1F/BoobSWs5voXa\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"YI9sx2oXB70D\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"Signaturz\u00e4hler: 98023\",\n        \"raw_price\": null\n      },\n      {\n        \"raw_text\": \"2025-10-18T14:00:05.000Z\",\n        \"\n\n"
+  }
+}

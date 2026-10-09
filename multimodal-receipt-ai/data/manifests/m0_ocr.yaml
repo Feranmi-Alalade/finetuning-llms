@@ -1,0 +1,121 @@
+name: m0_ocr
+stage: m0
+description: >
+  Phase 1: OCR-only model.
+  Learns visual → text transcription and failure detection.
+  No semantic reasoning permitted.
+
+# ============================
+# OBJECTIVES
+# ============================
+objectives:
+  training:
+    - name: ocr_token_loss
+      type: cross_entropy
+      formulation: >
+        \mathcal{L}_{ocr} = - \sum_{t=1}^{T} \log P(y_t \mid x, y_{<t})
+      weight: 0.75
+
+    - name: field_presence_loss
+      type: binary_cross_entropy
+      formulation: >
+        \mathcal{L}_{field} = \sum_f \Big[ y_f \log \hat{y}_f + (1-y_f)\log(1-\hat{y}_f) \Big]
+      weight: 0.15
+
+    - name: rejection_loss
+      type: classification
+      formulation: >
+        \mathcal{L}_{reject} = \mathcal{L}_{BCE}(r, \hat{r})
+      weight: 0.10
+
+  total_loss: >
+    \mathcal{L}_{M0} = 0.75\,\mathcal{L}_{ocr} + 0.15\,\mathcal{L}_{field} + 0.10\,\mathcal{L}_{reject}
+
+# ============================
+# SUPERVISION LEVEL
+# ============================
+supervision_level: receipt_level
+
+# ============================
+# DATA SELECTION
+# ============================
+data:
+  eligible_tags:
+    - base
+    - stability
+
+  exclusions:
+    - condition: stability_type == non_receipt
+      when: objective == ocr_token_loss
+
+# ============================
+# DATA MIX (IMAGE LEVEL)
+# ============================
+mix:
+  unit: image
+  components:
+    base:
+      tag: base
+      weight: 0.75
+      readable: true
+
+    blurry:
+      tag: stability:blurry
+      weight: 0.05
+
+    low_contrast:
+      tag: stability:low_contrast
+      weight: 0.05
+
+    rotation:
+      tag: stability:rotation
+      weight: 0.05
+
+    partial:
+      tag: stability:partial
+      weight: 0.05
+
+    empty:
+      tag: stability:empty
+      weight: 0.03
+    
+    non_receipt:
+      tag: stability:non_receipt
+      weight: 0.02
+
+# ============================
+# SPLITS
+# ============================
+splits:
+  train: 0.75
+  val/test: 0.25
+
+# ============================
+# SUPERVISION SOURCE
+# ============================
+supervision:
+  primary: teacher
+  synthetic_for_stability: true
+  min_teacher_confidence: 0.7
+
+# ============================
+# EVALUATION
+# ============================
+evaluation:
+  metrics:
+    cer:
+      good: "<= 0.08"
+      bad: ">= 0.15"
+
+    wer:
+      good: "<= 0.12"
+      bad: ">= 0.20"
+
+    rejection_accuracy:
+      good: ">= 0.95"
+      bad: "<= 0.85"
+
+  subsets:
+    clean: { tag: base }
+    degraded: { tag: stability, readable: true }
+    rejection: { stability_type: [empty, non_receipt] }

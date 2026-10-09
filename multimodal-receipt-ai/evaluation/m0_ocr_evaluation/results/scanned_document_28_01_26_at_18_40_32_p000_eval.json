@@ -1,0 +1,61 @@
+{
+  "image": "scanned_document_28_01_26_at_18_40_32_p000.jpg",
+  "ground_truth": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "ROSSMANN",
+      "date": "2026-01-26",
+      "time": "11:53",
+      "line_items": [
+        {
+          "raw_text": "8700216106542 ORAL-B ZB CLASSIC",
+          "raw_price": 1.95
+        },
+        {
+          "raw_text": "42348535 ISANA DEO ROLL-ON",
+          "raw_price": 0.6
+        }
+      ],
+      "subtotal": 2.14,
+      "tax": 0.41,
+      "total": 2.55,
+      "payment_method": "Mastercard"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.98
+  },
+  "prediction": {
+    "document_type": "receipt",
+    "ocr": {
+      "merchant_name": "ROSSMANN",
+      "date": "26.01.2026",
+      "time": "11:53",
+      "line_items": [
+        {
+          "raw_text": "8700216106542 ORAL-B ZB CLASSIC",
+          "raw_price": 1.95
+        },
+        {
+          "raw_text": "42348535 ISANA DEO ROLL-ON",
+          "raw_price": 0.6
+        }
+      ],
+      "subtotal": 2.55,
+      "tax": 0.41,
+      "total": 2.55,
+      "payment_method": "Mastercard"
+    },
+    "quality_flags": {
+      "is_blurry": false,
+      "is_partial": false,
+      "is_rotated": false,
+      "is_low_contrast": false
+    },
+    "confidence": 0.95
+  }
+}
